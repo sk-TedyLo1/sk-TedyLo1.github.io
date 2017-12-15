@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  var now = new Date();
+  console.log(now);
+  
+  var year = now.getFullYear();
+  console.log(year);
+  
+  var month = now.getMonth();
+  console.log(month);
+  
+  var day = now.getDay();
+  console.log(day);
+  
+  var hours = now.getHours();
+  console.log(hours);
+  
+  var minutes = now.getMinutes();
+  console.log(minutes);
+  
+  var seconds = now.getSeconds();
+  console.log(seconds);
+
+  var date1 = new Date();
+  console.log(date1.toString());
+  date1.setFullYear(2020);
+  date1.setMonth(6);  /*7月*/
+  date1.setDate(24);
+  console.log(date1.toString());
+  
+  console.log(date1.getTime());  /*1970年から2020年のオリンピックまでの時間*/
+
+  console.log(now.getTime());       /*1970年からたった時間*/
+
+  var diff = date1.getTime() - now.getTime();
+  console.log(diff);
+  diff = diff/(1000*60*60*24);
+  diff = Math.floor(diff);
+  console.log(diff);
+  </script>
+</body>
+</html>
