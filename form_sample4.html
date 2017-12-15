@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Sample4</title>
+  <script type="text/javascript">
+    function Sample4() {
+      var hoge = Sample4_form.drop.value;
+  </script>
+</head>
+
+<body>
+  <form name="Sample4_form" action="form_sample4.html">
+    <select name="drop">
+      <option value1="日曜日" />日曜日</option>
+      <option value="月曜日" />月曜日</option>
+      <option value="火曜日" />火曜日</option>
+      <option value="水曜日" />水曜日</option>
+      <option value="木曜日" />木曜日</option>
+      <option value="金曜日" />金曜日</option>
+      <option value="土曜日" />土曜日</option>
+      <input type="button" value="ボタン" onclick="Sample4()">
+    </select>
+    <script>
+        function Sample4() {
+          var hoge = Sample4_form.drop.value;
+          if (hoge == '日曜日') {
+            document.getElementById("value1").textContent = hoge + "は日曜日";
+          }
+          if (hoge == '月曜日') {
+            document.getElementById("value1").textContent = hoge + "は月曜日";
+          }
+          if (hoge == '火曜日') {
+            document.getElementById("value1").textContent = hoge + "は火曜日";
+          }
+          if (hoge == '水曜日') {
+            document.getElementById("value1").textContent = hoge + "は水曜日";
+          }
+          if (hoge == '木曜日') {
+            document.getElementById("value1").textContent = hoge + "は木曜日";
+          }
+          if (hoge == '金曜日') {
+            document.getElementById("value1").textContent = hoge + "は金曜日";
+          }
+          if (hoge == '土曜日') {
+            document.getElementById("value1").textContent = hoge + "は土曜日";
+          }
+        }
+    </script>
+  </form>
+  <p id="value1"></p>
+</body>
+
+</html>
