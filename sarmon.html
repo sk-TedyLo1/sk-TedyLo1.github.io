@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>サーモン</title>
+</head>
+
+<body>
+  <form action="">
+    <label for="neta">寿司ネタ：</label>
+    <select name="neta" id="neta">
+      <option value="">寿司ネタを選んでください</option>
+      <option value="maguro.html">マグロ</option>
+      <option value="sarmon.html">サーモン</option>
+      <option value="egg.html">玉子</option>
+    </select>
+  </form>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('neta').addEventListener('change', function () {
+        location.href = "https://sk-TedyLo1.github.io/" + this.value;
+      }, false);
+    }, false)
+  </script>
+
+  <img src="images/sarmon.jpg" alt="サーモン">
+</body>
+
+</html>
