@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>window</title>
+  <title>consoleオブジェクト</title>
   <style>
-    a {
-      margin-left: 90px;
+    hr {
+      width: 90%;
     }
 
     p {
@@ -16,14 +16,16 @@
       font-size: 18px;
     }
 
-    hr{
-      width: 90%;
-    }
-
-    .window {
+    h3 {
       margin-left: 90px;
       font-size: 25px;
       margin-top: 20px;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin-left: 90px;
+      width: 900px;
     }
   </style>
 </head>
@@ -50,24 +52,39 @@
       }, false);
     }, false)
   </script>
-  <h3 class="window">open()の使い方</h3>
-  <p>.open()は、新しく副ブラウザウィンドウを作ることができます。</p>
-  <p>新しいウィンドウで読み出したり、取り出してロードするURLを指定します。</p>
-  <h3 class="window">構文</h3>
-  <p>window.open(URL,name,option)</p>
-  <a href="http://javascriptist.net/ref/window.open.html" target="_blank">参照元</a>
+  <h3>consoleオブジェクトの使い方</h3>
+  <p>consoleオブジェクトは、ブラウザの開発者ツールのログに出力することができます。</p>
   <hr>
-  <h3 class="window">close()の使い方</h3>
-  <p>.close()は、open()で開いたブラウザウィンドウを閉じることができます。</p>
-  <h3 class="window">構文</h3>
-  <p>window.close()</p>
-  <a href="http://javascriptist.net/ref/window.close.html" target="_blank">参照元</a>
+  <h3>構文</h3>
+  <p>console.メソッド()</p>
   <hr>
-  <h3 class="window">focus()の使い方</h3>
-  <p>.focus()は、ウィンドウにあわせてピントを合わせることができます。</p>
-  <h3 class="window">構文</h3>
-  <p>widow.focus()</p>
-  <a href="http://javascriptist.net/ref/window.focus.html" target="_blank">参照元</a>
+  <h3>メソッド</h3>
+  <table border="1">
+    <tr>
+      <td>.group()</td>
+      <td>ログのグループ化</td>
+    </tr>
+    <tr>
+      <td>.count()</td>
+      <td>行が何回呼び出されたかを表示</td>
+    </tr>
+    <tr>
+      <td>.trace()</td>
+      <td>実行時のスタックトレースを出力</td>
+    </tr>
+    <tr>
+      <td>.timer()/.timerEnd</td>
+      <td>timerメソッドを呼び出してから、.timerEndを呼び出すまでの実行時間を計測</td>
+    </tr>
+    <tr>
+      <td>.assert()</td>
+      <td>指定した条件式がfalseの時にログに表示</td>
+    </tr>
+    <tr>
+      <td>.dir()</td>
+      <td>オブジェクトの内容を見やすくする</td>
+    </tr>
+  </table>
 </body>
 
 </html>
