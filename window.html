@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>window</title>
+  <style>
+    a {
+      margin-left: 90px;
+    }
+
+    p {
+      margin-left: 90px;
+      font-size: 18px;
+    }
+
+    hr{
+      width: 90%;
+    }
+
+    .moji {
+      text-align: center;
+      margin-bottom: 0px;
+    }
+
+    .window {
+      margin-left: 90px;
+      font-size: 25px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="">
+    <label for="neta"></label>
+    <select name="neta" id="neta">
+      <option value="">選んでください</option>
+      <option value="maguro.html">マグロ</option>
+      <option value="sarmon.html">サーモン</option>
+      <option value="egg.html">玉子</option>
+      <option value="git.html">オクトキャット</option>
+      <option value="images.html">お気に入りの画像</option>
+      <option value="showuseragent.html">バージョン確認</option>
+      <option value="window.html">windowの使い方</option>
+    </select>
+  </form>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('neta').addEventListener('change', function () {
+        location.href = "https://sk-TedyLo1.github.io/" + this.value;
+      }, false);
+    }, false)
+  </script>
+  <h3 class="window">open()の使い方</h3>
+  <p>.open()は、新しく副ブラウザウィンドウを作ることができます。</p>
+  <p>新しいウィンドウで読み出したり、取り出してロードするURLを指定します。</p>
+  <h3 class="window">構文</h3>
+  <p>window.open(URL,name,option)</p>
+  <a href="http://javascriptist.net/ref/window.open.html" target="_blank">参照元</a>
+  <hr>
+  <h3 class="window">close()の使い方</h3>
+  <p>.close()は、open()で開いたブラウザウィンドウを閉じることができます。</p>
+  <h3 class="window">構文</h3>
+  <p>window.close()</p>
+  <a href="http://javascriptist.net/ref/window.close.html" target="_blank">参照元</a>
+  <hr>
+  <h3 class="window">focus()の使い方</h3>
+  <p>.focus()は、ウィンドウにあわせてピントを合わせることができます。</p>
+  <h3 class="window">構文</h3>
+  <p>widow.focus()</p>
+  <a href="http://javascriptist.net/ref/window.focus.html">参照元</a>
+</body>
+
+</html>
