@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>カウントダウン</title>
+</head>
+
+<body>
+  <form action="">
+    <label for="neta"></label>
+    <select name="neta" id="neta">
+      <option value="">選んでください</option>
+      <option value="maguro.html">マグロ</option>
+      <option value="sarmon.html">サーモン</option>
+      <option value="egg.html">玉子</option>
+      <option value="git.html">オクトキャット</option>
+      <option value="images.html">お気に入りの画像</option>
+      <option value="showuseragent.html">バージョン確認</option>
+      <option value="window.html">windowの使い方</option>
+      <option value="console.html">consoleオブジェクトの使い方</option>
+      <option value="interval.html">カウントダウン</option>
+    </select>
+  </form>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('neta').addEventListener('change', function () {
+        location.href = "https://sk-TedyLo1.github.io/" + this.value;
+      }, false);
+    }, false)
+  </script>
+  <form name="timer">
+    <input type="text" value="">分
+    <input type="text" value="">秒
+    <input type="button" value="開始" onclick="cntstart()">
+    <script>
+      var Time;
+
+      function cntstart() {
+        document.timer.elements[2].disabled = true;
+        Time = setInterval("countdown()", 1000);
+      }
+
+      function cntstop() {
+        document.timer.elements[2].disabled = false;
+        clearInterval(Time);
+      }
+
+      function countdown() {
+        var min = document.timer.elements[0].value;
+        var sec = document.timer.elements[1].value;
+
+        if ((min == "") && (sec == "")) {
+          alert("時間の設定");
+          reset();
+        }
+        else {
+          if (min == "") min = 0;
+          min = parseInt(min);
+
+          if (sec == "") sec = 0;
+          sec = parseInt(sec);
+
+          tmwrite(min * 60 + sec - 1);
+        }
+      }
+
+      function tmwrite(int) {
+        int = parseInt(int);
+
+        if (int <= 0) {
+          reset();
+          alert("おわり");
+        }
+        else {
+          document.timer.elements[0].value = Math.floor(int / 60);
+          document.timer.elements[1].value = int % 60;
+        }
+      }
+
+      function reset() {
+        document.timer.elements[0].value = "0";
+        document.timer.elements[1].value = "0";
+        document.timer.elements[2].disabled = false;
+        clearInterval(Time);
+      }  
+    </script>
+  </form>
+</body>
+
+</html>
