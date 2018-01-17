@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>プルダウンメニュー</title>
+</head>
+<body>
+  <p>個数</p>
+  <form>
+    <select>
+      <option>選択</option>
+      <script>
+        var suuji;
+        for(suuji = 100; suuji >= 0; suuji -= 5) {
+          document.write('<option value="'+suuji+'">'+suuji+'個</option>');
+        }
+      </script>
+    </select>
+  </form>
+</body>
+</html>
