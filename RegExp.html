@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <p id="p">正規表現の勉強</p>
+  <script>
+    var users = 'user-g,user-a,user-k,user-d,user-z,user-m';
+
+    //a〜cの値を持つユーザーIDを抽出する
+    var pattern = new RegExp('user-[x-z]');
+    var result = users.match(pattern);
+
+    console.log(result[0]);
+  </script>
+
+  <script>
+    var users = 'user8, user2, user12, user123, user24, user9';
+    console.log('before');
+    console.log(users);
+    var pattern = new RegExp(/user\d\d\d/, "g");
+    var result = users.replace(pattern, 'new-user');
+    console.log('after');
+    console.log(result);
+  </script>
+
+<script>
+    var users = 'Hello Tanaka, Hello Yonai, Hello yachi, Hello Yoshida, Hello Sugawara';
+    console.log('before');
+    console.log(users);
+    var pattern = new RegExp(/Hello\s\w\w\w\w\w/, "g");
+    var result = users.replace(pattern, 'STUDENT');
+    console.log('after');
+    console.log(result);
+  </script>
+</body>
+
+</html>
