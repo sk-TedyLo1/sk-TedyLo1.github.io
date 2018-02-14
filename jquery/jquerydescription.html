@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery Description</title>
+  <style>
+    #p1 {
+      font-size: 30px;
+      margin-left: 20px;
+      margin-bottom: 0;
+    }
+    #hr1 {
+      color: grey;
+      width: 1330px;
+    }
+    #h1 {
+      font-size: 24px;
+      margin-left: 130px;
+      border-left: 10px solid #08007e;
+      margin-top: 50px;
+    }
+    #p3 {
+      font-size: 18px;
+      margin: 14px 0px 14px 140px;
+    }
+    img {
+      margin-left: 130px;
+    }
+  </style>
+</head>
+<body>
+  <p id="p1">animateメソッド</p>
+  <hr id="hr1">
+  <h1 id="h1">animateメソッドとは</h1>
+  <p id="p3">アニメーションを実装するためのメソッドです。オブジェクトの移動などができます。</p>
+  <p id="p3">簡単なアニメーションを作るときに使われるそうです。</p>
+  <h1 id="h1">解説</h1>
+  <img src="../images/animate.JPG" alt="animate">
+  <p id="p3">まずは一行ずつ説明していきます。
+  <p id="p3">26行目の$('#btn1')はinput内のIDに対応しています。次の行の$('#box1')はdivタグのIDに対応しているので、</p>
+  <p id="p3" style="margin-bottom: 80px">マウスカーソルをinputで作ったボタンの上にホバーさせるとmarginLeftで設定したピクセル分動きます。</p>
+  <p id="p1">フェードイン・フェードアウト</p>
+  <hr id="hr1">
+  <h1 id="h1">解説</h1>
+  <img src="../images/fade.JPG" alt="fade">
+  <p id="p3">21行目と22行目に記述したfadeToggleはその前に記述した$("#p1")にフェードをかけるというものです。</p>
+  <p id="p3">$('#p1')はpタグ内のテキストです。</p>
+  <p id="p3" style="margin-bottom: 80px">また、fadeToggleの括弧内に設定した数字はフェードをかけた時に表示・非表示にするための時間です。</p>
+  <p id="p1">スライド</p>
+  <hr id="hr1">
+  <h1 id="h1">解説</h1>
+  <img src="../images/slide.JPG" alt="slide">
+  <p id="p3">23行目と24行目に記述したslideToggleはpタグ内のテキストをスライドで表示・非表示させるというものです。</p>
+  <p id="p3">slideToggleの括弧内に設定した数字はスライドした時にかける時間です。</p>
+</body>
+</html>
