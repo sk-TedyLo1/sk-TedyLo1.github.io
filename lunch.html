@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Sample3</title>
+  <script type="text/javascript">
+    function Sample3() {
+      for (var i = 0; i < Sample3_form.radio.length; i++) {
+        if (Sample3_form.radio[i].checked == true) {
+          var ramen = Sample3_form.radio[i].value;
+          var ramen1 = Sample3_form.check[0].checked;
+          var ramen2 = Sample3_form.check[1].checked;
+          var ramen3 = Sample3_form.check[2].checked;
+          var hoge = "";
+          if (ramen1 == true) {
+            hoge = hoge + "\n" + "大盛";
+          }
+          if (ramen2 == true) {
+            hoge = hoge + "\n" + "半チャーハン";
+          }
+          if (ramen3 == true) {
+            hoge = hoge + "\n" + "餃子";
+          }
+          alert(ramen + hoge);
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <table border="2">
+    <tr>
+      <td>
+        <form name="Sample3_form" action="form_sample3.html">
+          <input type="radio" name="radio" value="蒙古タンメン" />蒙古タンメン
+          <br>
+          <input type="radio" name="radio" value="一楽ラーメン" />一楽ラーメン
+          <br>
+          <input type="radio" name="radio" value="節骨ラーメン" />節骨ラーメン
+          <br>
+      </td>
+      <td>
+        <form name="Sample3_form" action="form_sample3.html">
+          <input type="checkbox" name="check" />大盛
+          <br>
+          <input type="checkbox" name="check" />半チャーハン
+          <br>
+          <input type="checkbox" name="check" />餃子
+          <br>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="button" value="注文確定" onclick="Sample3()">
+      </td>
+    </tr>
+    </form>
+  </table>
+</body>
+
+</html>
