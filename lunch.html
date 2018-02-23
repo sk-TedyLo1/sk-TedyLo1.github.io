@@ -1,63 +1,86 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>Sample3</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>lunch cookie</title>
+  <style>
+    h1 {
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="menu">
+    <h1>メニューを選んでください。</h1>
+    <form name="cookie_form" action="radio">
+      <input type="radio" name="radio" value="蒙古タンメン" />蒙古タンメン
+      <br>
+      <input type="radio" name="radio" value="一楽ラーメン" />一楽ラーメン
+      <br>
+      <input type="radio" name="radio" value="節骨ラーメン" />節骨ラーメン
+      <br>
+      <h1>オプションはどうです？</h1>
+      <input type="checkbox" name="check" id="mori" />大盛
+      <br>
+      <input type="checkbox" name="check" id="hantya" />半チャーハン
+      <br>
+      <input type="checkbox" name="check" id="gyo" />餃子
+      <br>
+      <input type="checkbox" name="check" id="tya" />チャーシュー飯
+      <br>
+    </form>
+    <input type="button" value="注文確定" onclick="lunch()">
+  </div>
   <script type="text/javascript">
-    function Sample3() {
-      for (var i = 0; i < Sample3_form.radio.length; i++) {
-        if (Sample3_form.radio[i].checked == true) {
-          var ramen = Sample3_form.radio[i].value;
-          var ramen1 = Sample3_form.check[0].checked;
-          var ramen2 = Sample3_form.check[1].checked;
-          var ramen3 = Sample3_form.check[2].checked;
-          var hoge = "";
-          if (ramen1 == true) {
-            hoge = hoge + "\n" + "大盛";
+    function lunch() {
+      for (var i = 0; i < cookie_form.radio.length; i++) {
+        if (cookie_form.radio[i].checked == true) {
+
+          var rnc = cookie_form.radio[i].value;
+
+          var set1 = cookie_form.check[0].checked;
+          var set2 = cookie_form.check[1].checked;
+          var set3 = cookie_form.check[2].checked;
+          var set4 = cookie_form.check[3].checked;
+
+          var text = "";
+          var text2 = "";
+
+          if (set1 == true) {
+            text = text + "\n" + "大盛";
+            text2 = text2 + "大盛";
           }
-          if (ramen2 == true) {
-            hoge = hoge + "\n" + "半チャーハン";
+          if (set2 == true) {
+            text = text + "\n" + "半チャーハン";
+            text2 = text2 + "半チャーハン";
           }
-          if (ramen3 == true) {
-            hoge = hoge + "\n" + "餃子";
+          if (set3 == true) {
+            text = text + "\n" + "餃子";
+            text2 = text2 + "餃子";
           }
-          alert(ramen + hoge);
+          if (set4 == true) {
+            text = text + "\n" + "チャーシュー飯";
+            text2 = text2 + "チャーシュー飯";
+          }
+          alert("\n" + rnc + text + "\n" + "ですね？")
+
+          document.cookie = document.cookie + rnc + text2 + ";max-age180;path=/"
+          
+          var cok = document.cookie;
+          if (cok >= rnc) {
+            document.getElementById('menu').textContent='注文済み';
+            setTimeout(function () {
+              alert("はいお待ち！");
+            }, 120000); break;
+          }
         }
       }
     }
   </script>
-</head>
-
-<body>
-  <table border="2">
-    <tr>
-      <td>
-        <form name="Sample3_form" action="form_sample3.html">
-          <input type="radio" name="radio" value="蒙古タンメン" />蒙古タンメン
-          <br>
-          <input type="radio" name="radio" value="一楽ラーメン" />一楽ラーメン
-          <br>
-          <input type="radio" name="radio" value="節骨ラーメン" />節骨ラーメン
-          <br>
-      </td>
-      <td>
-        <form name="Sample3_form" action="form_sample3.html">
-          <input type="checkbox" name="check" />大盛
-          <br>
-          <input type="checkbox" name="check" />半チャーハン
-          <br>
-          <input type="checkbox" name="check" />餃子
-          <br>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <input type="button" value="注文確定" onclick="Sample3()">
-      </td>
-    </tr>
-    </form>
-  </table>
 </body>
 
 </html>
