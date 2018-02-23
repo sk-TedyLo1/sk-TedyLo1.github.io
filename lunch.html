@@ -14,6 +14,52 @@
 </head>
 
 <body>
+  <script type="text/javascript">
+    function lunch() {
+      for (var i = 0; i < cookie_form.radio.length; i++) {
+        if (cookie_form.radio[i].checked == true) {
+
+          var ramen = cookie_form.radio[i].value;
+
+          var han1 = cookie_form.check[0].checked;
+          var han2 = cookie_form.check[1].checked;
+          var han3 = cookie_form.check[2].checked;
+          var han4 = cookie_form.check[3].checked;
+
+          var hoge = "";
+          var hoge2 = "";
+
+          if (han1 == true) {
+            hoge = hoge + "\n" + "大盛";
+            hoge2 = hoge2 + "大盛";
+          }
+          if (han2 == true) {
+            hoge = hoge + "\n" + "半チャーハン";
+            hoge2 = hoge2 + "半チャーハン";
+          }
+          if (han3 == true) {
+            hoge = hoge + "\n" + "餃子";
+            hoge2 = hoge2 + "餃子";
+          }
+          if (han4 == true) {
+            hoge = hoge + "\n" + "チャーシュー飯";
+            hoge2 = hoge2 + "チャーシュー飯";
+          }
+          alert("\n" + ramen + hoge + "\n" + "ですね？")
+
+          document.cookie = document.cookie + ramen + hoge2 + ";max-age180;path=/"
+
+          var cok = document.cookie;
+          if (cok >= ramen) {
+            document.getElementById('menu').textContent = '注文済み';
+            setTimeout(function () {
+              alert("はいお待ち！");
+            }, 120000); break;
+          }
+        }
+      }
+    }
+  </script>
   <div id="menu">
     <h1>メニューを選んでください。</h1>
     <form name="cookie_form" action="radio">
@@ -35,52 +81,6 @@
     </form>
     <input type="button" value="注文確定" onclick="lunch()">
   </div>
-  <script type="text/javascript">
-    function lunch() {
-      for (var i = 0; i < cookie_form.radio.length; i++) {
-        if (cookie_form.radio[i].checked == true) {
-
-          var rnc = cookie_form.radio[i].value;
-
-          var set1 = cookie_form.check[0].checked;
-          var set2 = cookie_form.check[1].checked;
-          var set3 = cookie_form.check[2].checked;
-          var set4 = cookie_form.check[3].checked;
-
-          var text = "";
-          var text2 = "";
-
-          if (set1 == true) {
-            text = text + "\n" + "大盛";
-            text2 = text2 + "大盛";
-          }
-          if (set2 == true) {
-            text = text + "\n" + "半チャーハン";
-            text2 = text2 + "半チャーハン";
-          }
-          if (set3 == true) {
-            text = text + "\n" + "餃子";
-            text2 = text2 + "餃子";
-          }
-          if (set4 == true) {
-            text = text + "\n" + "チャーシュー飯";
-            text2 = text2 + "チャーシュー飯";
-          }
-          alert("\n" + rnc + text + "\n" + "ですね？")
-
-          document.cookie = document.cookie + rnc + text2 + ";max-age180;path=/"
-          
-          var cok = document.cookie;
-          if (cok >= rnc) {
-            document.getElementById('menu').textContent='注文済み';
-            setTimeout(function () {
-              alert("はいお待ち！");
-            }, 120000); break;
-          }
-        }
-      }
-    }
-  </script>
 </body>
 
 </html>
