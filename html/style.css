@@ -56,6 +56,37 @@ p {
   font-size: 18px;
 }
 
+.pagetop {
+  display: none;
+  position: fixed;
+  bottom: 16px;
+  right: 30px;
+}
+
+.pagetop a {
+  display: block;
+  background-color: rgb(2, 0, 119);
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  text-decoration: none;
+  padding: 5px 10px;
+  filter:alpha(opacity=50);
+}
+
+.pagetop a:hover {
+  display: block;
+  background-color: #ffffff;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  text-decoration: none;
+  padding:5px 10px;
+  filter:alpha(opacity=50);
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}
+
 footer {
   background: #000149;
 }

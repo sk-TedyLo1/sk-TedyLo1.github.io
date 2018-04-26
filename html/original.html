@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
   <title>profile</title>
 </head>
 
@@ -33,12 +34,28 @@
   <p>Javaプログランミング能力認定試験　3級</p>
   <p>Webクリエイター能力認定試験　エキスパート</p>
   <p>普通自動車第一種免許</p>
-  <!-- top 戻るここから↓ -->
-  <a href="#">
-      <img src="top.png" alt="top" align="right">
-    </a>
+  <p class="pagetop">
+    <a href="#wrap">↑</a>
+  </p>
+  <script>
+    $(document).ready(function () {
+      var pagetop = $('.pagetop');
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+          pagetop.fadeIn();
+        } else {
+          pagetop.fadeOut();
+        }
+      });
+      pagetop.click(function () {
+        $('body, html').animate({ scrollTop: 0 }, 500);
+        return false;
+      });
+    });
+  </script>
+
   <footer>
-      <p>Copyright © profile All rights reserved.</p>
+    <p>Copyright © profile All rights reserved.</p>
   </footer>
 </body>
 
