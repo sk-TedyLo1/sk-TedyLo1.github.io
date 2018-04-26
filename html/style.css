@@ -1,6 +1,6 @@
 .example {
   position: relative;
-  }
+}
 
 .example p {
   position: absolute;
@@ -14,11 +14,11 @@
   color: #fff;
   font-family: 'Book Antiqua';
   font-size: 50px;
-  }
+}
 
 .example img {
   width: 100%;
-  }
+}
 
 body hr {
   margin-bottom: 60px;
