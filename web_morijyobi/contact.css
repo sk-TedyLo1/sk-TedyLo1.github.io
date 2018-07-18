@@ -1,0 +1,254 @@
+@charset "UTF-8";
+
+/* オープンキャンパス
+================================================== */
+#underKv.oc{
+	background:url(/img/contact/bg_oc_kv.png) no-repeat center 0;
+}
+#underKv.oc h1{ letter-spacing: 1px; }
+
+.textArea.oc{
+	width:980px;
+	margin:80px auto 0;
+	display:table;
+}
+.textArea.oc .txt{
+	display:table-cell;
+	width:626px;
+	vertical-align:middle;
+	color:#666;
+}
+.textArea.oc .img{
+	display:table-cell;
+	width:354px;
+}
+
+.formCont{
+	width:980px;
+	margin:40px auto 0;
+	padding-bottom:58px;
+	border-bottom: 1px solid #e2e2e2;
+}
+.formCont table{
+	border-bottom:1px solid #dcdcdc;
+}
+.formCont table tr{
+	border-top:1px solid #dcdcdc;
+}
+.formCont table th{
+	width:230px;
+	background:#f2f2f2;
+	padding:0 40px 0 30px;
+	font-weight:bold;
+}
+.formCont table th span{
+	float:right;
+	font-size:12px;
+	display:inline-block;
+	color:#fff;
+	padding:3px 5px 2px;
+	font-weight:normal;
+	margin-top:1px;
+	line-height:1;
+}
+.formCont table th .required{
+	background:#e63737;
+}
+.formCont table th .option{
+	background:#666666;
+}
+.formCont table td{
+	padding:20px 40px;
+	font-size:14px;
+}
+.formCont table td .txtExample,
+.formCont table td .formRule{
+	font-size:12px;
+	color:#666;
+}
+/* text field */
+.formTf,
+.formTa{
+	width:300px;
+	height:34px;
+	background:#fff;
+	border:1px solid #cccccc;
+	border-radius:0;
+	box-sizing:border-box;
+	box-shadow:none;
+	text-indent:5px;
+	vertical-align:middle;
+	font-size:14px;
+}
+.formTa{
+	width:100%;
+	height:60px;
+}
+.txtExample{
+	margin-left:15px;
+}
+
+/**/
+
+.formL{ width:100%; }
+.formM{ width:300px; }
+.formS{ width:200px; }
+
+/**/
+
+.radioTrig,
+.wpcf7-radio label{
+	background:url(../web_morijyobi/images/icn_radio.png) no-repeat 0 2px;
+	background-size:18px auto;
+	padding:0 0 0 20px;
+	display:inline-block;
+	margin:0 30px 0 0;
+	cursor:pointer;
+}
+.radioTrig.checked,
+.wpcf7-radio label.checked{
+	background-position:0 -80px;
+}
+.radioTrig input,
+.wpcf7-radio input{
+	position:absolute;
+	left:-9999px;
+}
+
+/**/
+
+.sboxContainer{
+	position:relative;
+	display:inline-block;
+}
+.addSpace{
+	margin-bottom:5px;
+}
+.sboxContainer .outputTxt{
+	border:1px solid #cccccc;
+	height:34px;
+	line-height:32px;
+	box-sizing:border-box;
+	text-indent:11px;
+	white-space:nowrap;
+}
+.sboxContainer .outputTxt:after{
+	content:"";
+	position:absolute;
+	right:15px;
+	top:14px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 8px 5px 0 5px;
+	border-color: #333333 transparent transparent transparent;
+}
+.sboxContainer .outputTxt + p,
+.sboxContainer .wpcf7-form-control-wrap{
+	position:absolute;
+	left:0;
+	top:0;
+    display: block;
+    width: 100%;
+    height: 34px;
+}
+.sboxContainer .sbox{
+	width:100%;
+	height:100%;
+	display:block;
+	position:absolute;
+	left:0;
+	top:0;
+	opacity:0;
+	-webkit-appearance: menulist-button;
+}
+.formFooter{
+	margin:0 auto;
+	width:310px;
+	position:relative;
+}
+input[type="submit"]{
+	display:block;
+	margin:0 auto;
+	width:310px;
+	text-align:center;
+	color:#fff;
+	background:#0054a7 ;
+	position:relative;
+	font-size:16px;
+	padding:11px 0;
+	margin-top:35px;
+	box-shadow: 0 0 5px #d6d6d6;
+	-moz-box-shadow: 0 0 5px #d6d6d6;
+	-webkit-box-shadow: 0 0 5px #d6d6d6;
+}
+input[type="submit"]:disabled,
+input[type="submit"]:hover{
+	cursor:pointer;
+	opacity:0.7;
+}
+.formFooter .icnArrow{
+	position:absolute;
+	top:17px;
+	right:20px;
+}
+.formFooter .icnArrow img{
+	vertical-align:top;
+}
+
+
+/**/
+
+.underTxt{
+	margin-top:36px;
+	text-align:center;
+}
+
+/* 資料請求
+================================================== */
+#underKv.shiryo{
+	background:url(/img/contact/bg_shiryo_kv.png) no-repeat center 0;
+}
+.formCont table th .required.address{
+	margin-top:-10px;
+}
+.formTf.short{
+	width:100px;
+}
+.formTf.long{
+	width:100%;
+}
+.txtExample.newline{
+	display:inline-block;
+	margin:5px 0px 0px 0px;
+}
+
+/* お問い合わせ
+================================================== */
+#underKv.contact{
+	background:url(/img/contact/bg_contact_kv.png) no-repeat center 0;
+}
+.formTa.content{
+	height:150px;
+}
+
+.sboxContainer.formM .txtExample.newline{
+	width:600px;
+}
+#underKv h1.twoLine{
+	padding-top: 38px;
+	line-height: 65px;
+}
+optgroup{
+	font-style:normal;
+}
+.step02{
+    display: none;
+    margin-top: 15px;
+}
+.subHead{
+    margin-top: 15px;
+}
+.mb15{
+    margin-bottom: 15px;
+}
