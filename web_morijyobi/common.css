@@ -34,9 +34,30 @@ input[type="image"]{
 }
 
 /*ナビゲーション*/
-
-
-
+.site-header{
+	background: #fff;
+	display: flex;
+	padding: 20px 10px;
+	position: fixed;
+	justify-content: space-between;
+	width: 100%;
+}
+.site-logo img{
+	width: auto;
+	margin-left: 50px;
+}
+.gnav_menu{
+	display: flex;
+}
+.gnav_menu_item{
+	margin-left: 20px;
+	font-size: 16px;
+	margin-right: 40px;
+}
+.gnav_menu_item a{
+	color: #333;
+	text-decoration: none;
+}
 /* template
 ===============================================*/
 body{
