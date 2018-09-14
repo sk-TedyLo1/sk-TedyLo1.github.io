@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
+  <title>トップページ</title>
+</head>
+<body>
+  <div id="sitebox">
+    <div id="logo"><a href="../html/index.html"><img src="img/logo.png" alt="" class="logo"></a></div>
+    <img src="img/header.png" alt="" class="headerimg">
+    <div id="boxA">
+      <ul>
+        <li><a href="#">トップページ</a></li>
+        <li><a href="../html/gakka.html">学科紹介</a></li>
+        <li><a href="../html/course.html">コース紹介</a></li>
+        <li><a href="../html/contact.html">お問い合わせ</a></li>
+      </ul>
+  </div>
+  <div id="menu-background"></div>
+
+    <div id="boxB">
+      <h1>学科紹介</h1>
+      <h3 style="font-size:20px;">WEBネットワーク科</h3>
+      <div class="imgset">
+        <img src="img/web_code.jpg">
+        <img src="img/web_app.jpg">
+        <img src="img/net_ai.jpg">
+      </div>
+      <p class="text">進化を続けるネットワークの最新技術やサーバー構築技術を習得。ネットワークエンジニアやセキュリティエンジニアなど、これからのIT業界を担う高度な技術を持った人材を育てます。また、システム開発の基礎から応用まで、専門的に学べる2年課程。Webアプリケーションの開発など、スペシャリストに必要な高い技術が身につけられます。</p>
+      <a href="../html/gakka.html"><button>もっと見る</button></a>
+      
+      <h1 class="course">コース紹介</h1>
+      <h3 style="font-size:20px;">WEBアプリケーションコース</h3>
+      <div class="imgset">
+        <img src="img/web_icon.jpg">
+        <img src="img/web_media.jpg">
+        <img src="img/web_social.jpg">
+      </div>
+      <p class="text">近年のWebアプリケーションを始めとするソフトウェアの多くは、大規模化している上に、様々なサービスとの連携により、以前にも増して複雑化してきています。これにより、Web開発現場でも顧客のニーズに合わせ、柔軟で素早い開発が行える人材が求められています。本コースでは、Webサイトの構築の基礎となるHTML５＆CSS3をはじめ、アクティブなページを作るためのJavaScript、インタラクティブなWebシステム構築ができるPHP言語、Ruby on Railsを体系的に学びます。また、企業や団体のWebサイト構築を行う開発演習では、実践能力の育成だけでなく、クラウドサービスとの連携による最新のセキュアなWebサイト構築法の習得を目指します。</p>
+      <a href="../html/course.html"><button>もっと見る</button></a>
+    </div>
+
+    <div id="boxC">
+        <h3 style="font-size:23px; padding-top: 30px;">盛岡情報ビジネス専門学校</h3>
+        <p style="font-size:18px;">〒020-0021　岩手県盛岡市中央通り</p>
+        <p class="footer_text" style="padding-bottom: 30px;"><img src="img/icn_tel.png"> 0120-490114</p>
+      </div>
+      <p id="back-top">
+      <a href="#top"><span><img src="img/arrow_top.png" alt="↑" width="25" height="25" /></span></a></p>
+  </div>
+  <script>
+  $(document).ready(function(){
+    $("#back-top").hide();
+        $(function () {
+        $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('#back-top').fadeIn();
+            } else {
+            $('#back-top').fadeOut();
+            }
+        });
+        // scroll body to 0px on click
+        $('#back-top a').click(function () {
+            $('body,html').animate({
+            scrollTop: 0
+            }, 800);
+            return false;
+        });
+    });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+body {
+  font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+  margin: 0;
+}
+h1 {
+  color: blue;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+ul li {
+  list-style-type: none;
+}
+#sitebox {
+  width: 100%;
+  margin: 5px auto;
+}
+#back-top {
+  position:fixed;
+  bottom: 0;
+  right: 0;
+}
+#back-top a {
+  width: 50px;
+  display: block;
+  text-align: center;
+  font: 11px/100% Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #bbb;
+  /* transition */
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  transition: 1s;
+}
+#back-top a:hover {
+  color: #000;
+}
+/* arrow icon (span tag) */
+#back-top span {
+  width: 50px;
+  height: 40px;
+  display: block;
+  margin-bottom: 7px;
+  padding: 10px 0 0;
+  background: rgba(195, 195, 195, 0.5) ;
+  font-size: 20px;
+  color:#000;
+  /* rounded corners */
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  /* transition */
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  transition: 1s;
+}
+#back-top a:hover span {
+  background-color: #777;
+}
+
+/*メニュー部分*/
+#boxA {
+  background-color: #fff; /*メニュー背景色*/
+  box-sizing: border-box;
+  height: 100%;
+  padding: 10px 40px; /*メニュー内部上下左右余白*/
+  position: fixed;
+  right: -300px; /*メニュー横幅①と合わせる*/
+  top: 0;
+  transition: transform 0.3s linear 0s; /*0.3s は変化するのにかかる時間*/
+  width: 300px; /*メニュー横幅①*/
+  z-index: 1000;
+}
+/*メニューアイコン部分は疑似要素で*/
+#boxA::before {
+  background-color: #fff; /*ボタン部分背景色*/
+  color: #333; /*アイコン（フォント）色*/
+  content: "≡"; /*メニューアイコン*/
+  display: block;
+  font-size: 50px; /*アイコン（フォント）サイズ*/
+  height: 50px;
+  line-height: 50px; /*縦位置中央化*/
+  position: absolute;
+  right: 100%;
+  text-align: center;
+  top: 0;
+  width: 50px;
+  border: 2px solid rgb(102, 102, 102);
+}
+/*透過背景部分*/
+#menu-background {
+  background-color: rgba(51, 51, 51, 0.534); /*黒背景部分背景色*/
+  display: block;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: all 0.3s linear 0s; /*0.3s は変化するのにかかる時間*/
+  width: 100%;
+  z-index: -1;
+}
+/*hover 時の処理*/
+#boxA:hover {
+  transform: translate(-300px); /*メニュー横幅①と合わせる*/
+}
+#boxA:hover + #menu-background {
+  opacity: 0.5; /*黒背景部分透過度*/
+  z-index: 999;
+}
+#boxA li {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+#boxA a:hover {
+  opacity: 0.7;
+  color: blue;
+}
+.headerimg {
+  width: 100%;
+  padding-top: 0;
+}
+#logo {
+  margin-left: 50px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+#logo a:hover {
+  opacity: 0.7;
+}
+
+
+/*boxB 中身*/
+#boxB {
+  width: 850px;
+  margin: 100px auto;
+}
+#boxB img {
+  margin-left: 30px;
+  margin-top: 30px;
+  float: left;
+  margin-bottom: 10px;
+}
+#boxB .imgset {
+  text-align: center;
+}
+#boxB .text {
+  clear: both;
+  margin-right: 30px;
+  margin: 10px auto;
+}
+#boxB h1 {
+  border-bottom: 2px solid blue;
+}
+#boxB .course {
+  margin-top:10px;
+}
+button {
+  background-color: rgb(0, 0, 128);
+  border: 2px solid rgb(0, 0, 128);
+  width: 300px;
+  height: 50px;
+  color: #fff;
+  margin-left: 270px;
+  font-size: 15px;
+  margin-top: 30px;
+  margin-bottom: 80px;
+}
+button:hover {
+  opacity: 0.7;
+}
+
+
+/*footer*/
+#boxC {
+  padding-top: 0;
+  width: 100%;
+  background-color: rgba(177, 177, 177, 0.37);
+  position: absolute;
+}
+#boxC h3,p {
+  margin-left: 50px;
+}
+#boxC h3 {
+  margin-bottom: 0;
+}
+#boxC p {
+  margin-top: 0;
+}
+#boxC .footer_text {
+  margin-left: 50px;
+  font-size: 30px;
+}

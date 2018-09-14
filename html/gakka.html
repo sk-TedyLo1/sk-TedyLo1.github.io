@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/gakka.css">
+  <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
+  <title>学科紹介</title>
+</head>
+<body>
+  <div id="sitebox">
+    <div id="logo"><a href="../html/index.html"><img src="img/logo.png" alt="" class="logo"></a></div>
+    <img src="img/header.png" alt="" class="headerimg">
+    <div id="boxA">
+      <ul>
+        <li><a href="../html/index.html">トップページ</a></li>
+        <li><a href="#">学科紹介</a></li>
+        <li><a href="../html/course.html">コース紹介</a></li>
+        <li><a href="../html/contact.html">お問い合わせ</a></li>
+      </ul>
+  </div>
+  <div id="menu-background"></div>
+
+    <div id="boxB">
+      <h1>学科紹介</h1>
+      <h3>WEBネットワーク科の特徴</h3>
+      <img src="img/gak_tokutyou1.jpg" alt="">
+      <div class="b1-text">
+        <h3>より幅広い知識と高い専門性を追求</h3>
+        <p>２年課程の知識・技術加え、自分が興味のあるプログラム言語についてじっくりと時間をかけて勉強できます。また、モバイル分野で求められるより高度なＩＴ知識やプログラミングスキルを習得することができます。</p>
+      </div>
+      <img src="img/gak_tokutyou2.jpg" alt="">
+      <div class="b2-text">
+        <h3>企業連携で即戦力の人材を育成</h3>
+        <p>経験豊富な企業の方々とチームで取り組むことにより、実際のプロジェクト開発を体験しながら、仕事に対する責任感や人に伝えるプレゼン能力などを習得。開発上の様々なトラブルにも対応できる解決能力や、実践力を身につけることができます。</p>
+      </div>
+      <img src="img/gak_tokutyou3.jpg" alt="">
+      <div class="b3-text">
+        <h3>ネットワーク業界を本格的に学べる学科</h3>
+        <p>コンピューターやネットワーク技術を基礎から学び、実際のサーバやネットワーク機器を活用して実践的な運用スキル・セキュリティスキルを身につけます。 サーバやクラウド技術の発展が目覚ましい近年では、セキュリティも含めて需要の高い職種でもあります。</p>
+      </div>
+    </div>
+
+    <div id="boxC">
+        <h3 style="font-size:23px; padding-top: 30px;">盛岡情報ビジネス専門学校</h3>
+        <p style="font-size:18px;">〒020-0021　岩手県盛岡市中央通り</p>
+        <p class="footer_text" style="padding-bottom: 30px;"><img src="img/icn_tel.png"> 0120-490114</p>
+      </div>
+      <p id="back-top">
+        <a href="#top"><span><img src="img/arrow_top.png" alt="↑" width="25" height="25" /></span></a></p>
+  </div>
+  <script>
+    $(document).ready(function(){
+      $("#back-top").hide();
+          $(function () {
+          $(window).scroll(function () {
+          if ($(this).scrollTop() > 100) {
+              $('#back-top').fadeIn();
+              } else {
+              $('#back-top').fadeOut();
+              }
+          });
+          // scroll body to 0px on click
+          $('#back-top a').click(function () {
+              $('body,html').animate({
+              scrollTop: 0
+              }, 800);
+              return false;
+          });
+      });
+  });
+  </script>
+</body>
+</html>
