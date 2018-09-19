@@ -52,20 +52,38 @@
       <a href="#top"><span><img src="img/arrow_top.png" alt="↑" width="25" height="25" /></span></a></p>
   </div>
   <div class="page-loader">
-    <div class="spinner"></div>
+    <div id="fountainTextG">
+      <div id="fountainTextG_1" class="fountainTextG">W</div>
+      <div id="fountainTextG_2" class="fountainTextG">e</div>
+      <div id="fountainTextG_3" class="fountainTextG">b</div>
+      <div id="fountainTextG_4" class="fountainTextG"> </div>
+      <div id="fountainTextG_5" class="fountainTextG">D</div>
+      <div id="fountainTextG_6" class="fountainTextG">e</div>
+      <div id="fountainTextG_7" class="fountainTextG">s</div>
+      <div id="fountainTextG_8" class="fountainTextG">i</div>
+      <div id="fountainTextG_9" class="fountainTextG">g</div>
+      <div id="fountainTextG_10" class="fountainTextG">n</div>
+      <div id="fountainTextG_11" class="fountainTextG"> </div>
+      <div id="fountainTextG_12" class="fountainTextG">L</div>
+      <div id="fountainTextG_13" class="fountainTextG">e</div>
+      <div id="fountainTextG_14" class="fountainTextG">a</div>
+      <div id="fountainTextG_15" class="fountainTextG">v</div>
+      <div id="fountainTextG_16" class="fountainTextG">e</div>
+      <div id="fountainTextG_17" class="fountainTextG">s</div>
+    </div>
   </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
-<script>
-// ページのロード完了時にローディング画面をフェードアウト
-$(window).on('load', function() {
-  $(".page-loader").fadeOut(600);
-});
-  
-// ページのロードが完了しない場合でも10秒たったら強制的にローディング画面をフェードアウト（オプション）
-setTimeout('stoploading()', 10000); 
-function stoploading() {
-  $(".page-loader").fadeOut('fast');
-}
-</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+  <script>
+  // ページのロード完了時にローダーをフェードアウト
+  $(window).on('load', function() {
+    $(".page-loader").fadeOut('slow');
+  });
+    
+  // ページのロードが完了しない場合でも10秒たったら強制的にローダーをフェードアウト（オプション）
+  setTimeout('stoploading()', 10000); 
+  function stoploading() {
+    $(".page-loader").fadeOut('fast');
+  }
+  </script>
 </body>
 </html>
