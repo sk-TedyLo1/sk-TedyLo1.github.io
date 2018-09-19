@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <title>トップページ</title>
 </head>
 <body>
@@ -51,39 +52,26 @@
       <p id="back-top">
       <a href="#top"><span><img src="img/arrow_top.png" alt="↑" width="25" height="25" /></span></a></p>
   </div>
-  <div class="page-loader">
-    <div id="fountainTextG">
-      <div id="fountainTextG_1" class="fountainTextG">W</div>
-      <div id="fountainTextG_2" class="fountainTextG">e</div>
-      <div id="fountainTextG_3" class="fountainTextG">b</div>
-      <div id="fountainTextG_4" class="fountainTextG"> </div>
-      <div id="fountainTextG_5" class="fountainTextG">D</div>
-      <div id="fountainTextG_6" class="fountainTextG">e</div>
-      <div id="fountainTextG_7" class="fountainTextG">s</div>
-      <div id="fountainTextG_8" class="fountainTextG">i</div>
-      <div id="fountainTextG_9" class="fountainTextG">g</div>
-      <div id="fountainTextG_10" class="fountainTextG">n</div>
-      <div id="fountainTextG_11" class="fountainTextG"> </div>
-      <div id="fountainTextG_12" class="fountainTextG">L</div>
-      <div id="fountainTextG_13" class="fountainTextG">e</div>
-      <div id="fountainTextG_14" class="fountainTextG">a</div>
-      <div id="fountainTextG_15" class="fountainTextG">v</div>
-      <div id="fountainTextG_16" class="fountainTextG">e</div>
-      <div id="fountainTextG_17" class="fountainTextG">s</div>
-    </div>
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
   <script>
-  // ページのロード完了時にローダーをフェードアウト
-  $(window).on('load', function() {
-    $(".page-loader").fadeOut('slow');
-  });
-    
-  // ページのロードが完了しない場合でも10秒たったら強制的にローダーをフェードアウト（オプション）
-  setTimeout('stoploading()', 10000); 
-  function stoploading() {
-    $(".page-loader").fadeOut('fast');
-  }
-  </script>
+  $(document).ready(function(){
+    $("#back-top").hide();
+        $(function () {
+        $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('#back-top').fadeIn();
+            } else {
+            $('#back-top').fadeOut();
+            }
+        });
+        // scroll body to 0px on click
+        $('#back-top a').click(function () {
+            $('body,html').animate({
+            scrollTop: 0
+            }, 800);
+            return false;
+        });
+    });
+});
+</script>
 </body>
 </html>
