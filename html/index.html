@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
   <title>トップページ</title>
 </head>
 <body>
@@ -52,26 +51,21 @@
       <p id="back-top">
       <a href="#top"><span><img src="img/arrow_top.png" alt="↑" width="25" height="25" /></span></a></p>
   </div>
-  <script>
-  $(document).ready(function(){
-    $("#back-top").hide();
-        $(function () {
-        $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            $('#back-top').fadeIn();
-            } else {
-            $('#back-top').fadeOut();
-            }
-        });
-        // scroll body to 0px on click
-        $('#back-top a').click(function () {
-            $('body,html').animate({
-            scrollTop: 0
-            }, 800);
-            return false;
-        });
-    });
+  <div class="page-loader">
+    <div class="spinner"></div>
+  </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+<script>
+// ページのロード完了時にローディング画面をフェードアウト
+$(window).on('load', function() {
+  $(".page-loader").fadeOut(600);
 });
+  
+// ページのロードが完了しない場合でも10秒たったら強制的にローディング画面をフェードアウト（オプション）
+setTimeout('stoploading()', 10000); 
+function stoploading() {
+  $(".page-loader").fadeOut('fast');
+}
 </script>
 </body>
 </html>
