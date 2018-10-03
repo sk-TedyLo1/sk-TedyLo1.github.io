@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="cssmb/contact_mb.css">
   <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
   <script>
       $(document).ready(function(){
@@ -47,45 +48,27 @@
     <div id="boxB">
       <h1>お問い合わせ</h1>
       <p class="form_text">以下の項目を入力して送信してください。</p>
-      <table height="340px;">
-        <tr>
-          <th>氏名</th>
-          <td><input type="text" style="width: 400px;"></td>
-        </tr>
-        <tr>
-          <th>メールアドレス</th>
-          <td><input type="email" style="width: 400px;"></td>
-        </tr>
-        <tr>
-          <th>電話番号</th>
-          <td><input type="text" style="width: 400px;"></td>
-        </tr>
-        <tr>
-          <th>現在の状況</th>
-          <td>
-            <select style="width: 200px;">
-              <option value="">選んでください</option>
-              <option value="高校１年">高校１年</option>
-              <option value="高校２年">高校２年</option>
-              <option value="高校３年">高校３年</option>
-              <option value="既卒">既卒</option>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <th>ご意見</th>
-          <td><textarea style="width: 400px; height: 100px;"></textarea></td>
-        </tr>
-      </table>
+      <div id="form">
+        <p><input type="text" placeholder="氏名を入力して下さい。"></p>
+        <p><input type="email" placeholder="メールアドレスを入力して下さい。"></p>
+        <p><input type="text" placeholder="電話番号を入力して下さい。"></p>
+        <select>
+          <option value="">選んでください</option>
+          <option value="高校１年">高校１年</option>
+          <option value="高校２年">高校２年</option>
+          <option value="高校３年">高校３年</option>
+          <option value="既卒">既卒</option>
+        </select>
+      </div>
         <a href="#"><button>送信する</button></a>
     </div>
 
     <div id="boxC">
-      <h3 style="font-size:23px; padding-top: 30px;">盛岡情報ビジネス専門学校</h3>
-      <p style="font-size:18px;">〒020-0021　岩手県盛岡市中央通り</p>
-      <p class="footer_text" style="padding-bottom: 30px;"><img src="img/icn_tel.png"> 0120-490114</p>
-    </div>
-    <p id="back-top">
+        <h3>盛岡情報ビジネス専門学校</h3>
+        <p>〒020-0021　岩手県盛岡市中央通り</p>
+        <p class="footer_text"><img src="img/icn_tel.png"> 0120-490114</p>
+      </div>
+      <p id="back-top">
       <a href="#top"><span><img src="img/arrow_top.png" alt="↑" width="25" height="25" /></span></a></p>
   </div>
 </body>
