@@ -145,7 +145,7 @@ ul li {
   font-size: 15px;
   margin: auto;
 }
-az button {
+a button {
   background-color: rgb(0, 0, 128);
   border: 2px solid rgb(0, 0, 128);
   width: 300px;
@@ -168,7 +168,6 @@ az button {
 #form,select {
   margin-left: 50px;
   width: 200px;
-  
 }
 
 /*footer*/
