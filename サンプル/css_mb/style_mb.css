@@ -1,5 +1,8 @@
 @media screen and (max-width: 479px) { /*ウィンドウの幅が479px以下の時に適当*/
-body {
+a {
+  text-decoration: none;
+}
+  body {
   float: none;
   color: #333;
 }

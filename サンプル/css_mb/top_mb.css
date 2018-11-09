@@ -4,10 +4,12 @@
   margin: 5px auto;
 }
 #btngroup {
-  margin: 5px auto;
-  margin-bottom: 70px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 button {
   width: 290px;
+  height: 50px;
 }
 }
