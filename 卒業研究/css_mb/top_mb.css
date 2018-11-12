@@ -2,6 +2,7 @@
 .pc {
   width: 100%;
   margin: 5px auto;
+  display: none;
 }
 #btngroup {
   text-align: center;
