@@ -1,0 +1,32 @@
+a {
+  text-decoration: none;
+}
+@media screen and (min-width: 1000px) {/*ウィンドウの幅が1000px以上の時に適応*/
+body {
+  font-size: 20px;
+  font-family: sans-serif;
+  color: #333;
+}
+#sitebox {
+  width: 1000px;
+  margin: 0 auto;
+}
+#boxA {
+  width: 1000px;
+}
+#boxA img {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+#boxA img:hover {
+  opacity: 0.7;
+}
+#boxB {
+  width: 800px;
+  margin: 20px auto;
+}
+#box_footer {
+  width: 1000px;
+  text-align: center;
+}
+}
