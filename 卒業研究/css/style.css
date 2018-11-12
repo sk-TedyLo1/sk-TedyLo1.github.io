@@ -4,8 +4,6 @@ a {
 @media screen and (min-width: 1000px) {/*ウィンドウの幅が1000px以上の時に適応*/
 body {
   font-size: 20px;
-  font-family: sans-serif;
-  color: #333;
 }
 #sitebox {
   width: 1000px;
@@ -24,9 +22,5 @@ body {
 #boxB {
   width: 800px;
   margin: 20px auto;
-}
-#box_footer {
-  width: 1000px;
-  text-align: center;
 }
 }
