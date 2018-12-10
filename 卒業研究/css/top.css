@@ -1,19 +1,57 @@
-@media screen and (min-width: 1000px) {/*ウィンドウの幅が1000px以上の時に適応*/
+@media screen and (min-width: 601px) {/*ウィンドウの幅が600px以上の時に適応*/
 body{
   font-size: 20px;
 }
-#boxB,.pc {
-  text-align: center;
+#boxB {
+  background: #6B3008;
+  height: 265px;
 }
-#btngroup {
-  text-align: center;
-  margin-top: 70px;
-  margin-bottom: 70px;
+#boxB,p {
+  color: #fff;
+  font-size: 17px;
+  padding-top: 3px;
+  text-align: justify;
 }
-#btngroup button {
-  width: 290px;
+.boxB_midasi {
+  text-align: center;
+  padding-bottom: 7px;
+  font-size: 23px;
+}
+.boxB_text {
+  width: 640px;
+  margin-left: 430px;
+  padding-top: 52px;
+}
+.pc {
+  width: 100%;
+  box-shadow: 5px 5px 5px 10px #6B3008;
+}
+.btn1 {
+  float: left;
+  background: rgb(5, 153, 0);
+  width: 250px;
   height: 50px;
-  margin-left: 40px;
-  margin-right: 40px;
+  border: 1px solid rgb(5, 153, 0);
+  margin-left: 435px;
+  margin-top: 90px;
+}
+.btn, a:link {
+  color: #fff;
+}
+.btn, a:visited {
+  color: #333;
+}
+.btn2 {
+  float: right;
+  background: rgb(5, 153, 0);
+  width: 250px;
+  height: 50px;
+  border: 1px solid rgb(5, 153, 0);
+  margin-right: 435px;
+  margin-top: 90px;
+}
+#boxC {
+  width: 100%;
+  height: 220px;
 }
 }

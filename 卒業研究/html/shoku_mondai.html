@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/mondai.css">
+  <link rel="stylesheet" href="../css_mb/style_mb.css">
+  <link rel="stylesheet" href="../css_mb/mondai_mb.css">
+  <title>問題 | Hunger to Zero</title>
+</head>
+
+<body>
+    <!--ヘッダー-->
+    <div id="boxA">
+      <a href="../html/top.html"><img src="../img/logo.png" alt="ロゴ"></a>
+    </div>
+
+    <!--問題出題-->
+    <div id="quiz"></div>
+    <div id="select"></div>
+    <div id="answer"></div>
+    <script>
+      qa = new Array();
+      qa[0] = ["問題","解答","解答","解答","解答",2];
+      qa[1] = ["飢餓になると体にどんなことが起こるでしょうか？","体重がへる","やせる","身体を動かせなくなる","太る",3];
+      qa[2] = ["飢餓になるとどのくらいでなくなってしまうのでしょうか？","1週間","1日","1か月","1年",1];
+      qa[3] = ["飢餓とはどんなことでしょうか？","太っていること","ストレス","運動不足","栄養(えいよう)が足りていないこと",4];
+      qa[4] = ["人間は食べ物を食べなくてもどのくらいの間平気でいられるでしょうか？","1年","1か月","2か月","食べなくても平気",3];
+      qa[5] = ["飢餓の原因となっている栄養不足はなぜ起こるでしょうか？","食糧争い(しょくりょうあらそい)","運動のしすぎ","ねていないから","自然災害(しぜんさいがい)、戦争(せんそう)",4];
+      qa[6] = ["世界には食べ物が不足していますか？","困らないくらいある","足りない","足りている","ぜんぜんない",1];
+      qa[7] = ["飢餓で苦しんでいる人が多いところはどこでしょうか？","アジア","南アメリカ","ヨーロッパ","アフリカ",4];
+      qa[8] = ["日本がすてている食べ物の量はどのくらいでしょうか？","100万トン","2000万トン","200キログラム","3000万トン",2];
+      qa[9] = ["日本が食べ物をすてる理由はなんでしょうか？","きらいな食べ物がたくさんあるから","食べ物がたくさんあるから","食べたくないから","賞味期限(しょうみきげん)が切れたから",4];
+
+      //初期設定
+      q_sel = 4; //選択肢の数
+      q_max = 10; //出題数
+      setReady();
+
+      //初期設定
+      function setReady() {
+        count = 0; //問題番号
+        ansers = new Array(); //解答記録
+
+        //最初の問題
+        quiz();
+      }
+
+      //問題表示
+      function quiz() {
+        //問題
+        rnd = Math.floor(Math.random() * qa.length); //乱数
+        document.getElementById("quiz").innerHTML = (count + 1) + "問目: " + qa[rnd][0];
+        //選択肢
+        s = ""
+        for (n=1; n<=q_sel;n++) {
+          if (qa[rnd][n] != "") {
+            s += "<a href='javascript:anser(" + n + ")'>" + n + "：" + qa[rnd][n] + "</a>";
+          }
+        }
+        document.getElementById("select").innerHTML = s;
+      }
+
+      //解答表示
+      function anser(num) {
+        var s;
+        s =(count + 1) + "問目: ";
+        //答え合わせ
+        if(num == qa[rnd][q_sel + 1]) {
+          //正解
+          ansers[count] = "○";
+        } else {
+          ansers[count] = "×";
+        }
+        s += ansers[count] + qa[rnd][num];
+        document.getElementById("answer").innerHTML = s;
+
+        //次の問題を表示
+        count++;
+        if (count < q_max) {
+        quiz();
+        } else {
+          //終了
+          s = "<table border='2'><caption>成績発表</caption>";
+          //1行目
+          s += "<tr><th>問題</th>";
+          for (n=0; n<qa.length; n++) {
+            s += "<th>" + (n+1) + "</th>";
+          }
+          s += "</tr>";
+          //2行目
+          s += "<tr><th>成績</th>";
+          for (n=0; n<qa/length; n++) {
+            s += "<td>" + ansers[n] + "</td>";
+          }
+          s += "</tr>";
+          s += "</table>";
+          document.getElementById("quiz").innerHTML = s;
+          document.getElementById("select").innerHTML =s;
+        }
+      }
+    </script>
+</body>
+
+</html>

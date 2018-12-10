@@ -1,0 +1,14 @@
+@media screen and (max-width: 600px) { /*ウィンドウの幅がpx以下の時に適当*/
+button {
+  width: 230px;
+  height: 50px;
+  background-color: rgb(0, 33, 179);
+  border: 0;
+}
+#btn{
+  text-align: center;
+}
+#textset .p1 {
+  margin-bottom: 40px;
+}
+}

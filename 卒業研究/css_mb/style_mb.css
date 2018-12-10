@@ -1,8 +1,48 @@
-@media screen and (max-width: 479px) { /*ウィンドウの幅が479px以下の時に適当*/
-a {
-  text-decoration: none;
-}
+@media screen and (max-width: 600px) { /*ウィンドウの幅が600px以下の時に適当*/
 body {
   float: none;
+  margin: 0;
+  font-family: "fantasy", sans-serif;
+}
+#boxA a {
+  margin-left: 5px;
+}
+#boxA, img {
+  margin-top: 5px;
+}
+#quiz {
+  width: 90%;
+  margin: 5px auto;
+}
+#boxB {
+  width: 90%;
+  margin: 5px auto;
+}
+.breadcrumb {
+  padding-left: 0;
+  margin-left: 3px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+.breadcrumb li{
+  display: inline;
+  list-style: none;
+  font-weight: bold;
+}
+.breadcrumb li:after{
+  content: '>';
+  padding: 0 3px;
+  color: #555;
+}
+.breadcrumb li:last-child:after{
+  content: '';
+}
+.breadcrumb li a {
+  text-decoration: none;
+  color: #52b5ee;
+  font-size: 13px;
+}
+.breadcrumb li a:hover {
+  text-decoration: underline;
 }
 }
