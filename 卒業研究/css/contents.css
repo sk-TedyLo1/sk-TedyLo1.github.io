@@ -1,67 +1,67 @@
-@media screen and (min-width: 601px){
+@media screen and (min-width: 601px) {
 .marker_yellow_futo {
-  background: linear-gradient(transparent 0%, #096800 0%);
+  background: linear-gradient(transparent 0%, #FFFF99 0%);
 }
-#waku1 {
-  background: #6B3008;
-  width: 100%;
-  height: 300px;
+#ct_header {
+  height: 60px;
+  background: rgb(0, 175, 58);
 }
-#waku1-2 {
-  background: rgb(13, 0, 87);
-  width: 100%;
-  height: 300px;
-}
-#waku2 {
-  background: #63003a;
-  width: 100%;
-  height: 300px;
-}
-#waku3 {
-  background: #074e00;
-  width: 100%;
-  height: 300px;
-}
-#waku4 {
-  width: 100%;
-  background: darkred;
-  height: 300px;
-}
-#waku5 {
-  width: 100%;
-  background: rgb(18, 131, 131);
-  height: 300px;
-}
-#waku6 {
-  width: 100%;
-  background: peru;
-  height: 300px;
-}
-#waku7 {
-  width: 100%;
-  background: seagreen;
-  height: 300px;
-}
-.ct_text {
-  width: 900px;
-  margin: 0 auto;
+#ct_header, h1 {
   color: #fff;
-}
-.ct_text, p {
-  font-size: 17px;
-  text-align: justify;
-}
-#midasi {
-  padding-top: 100px;
-  padding-bottom: 10px;
+  padding-left: 125px;
+  padding-top: 7px;
   font-size: 26px;
-  text-align: center;
 }
-#midasi2 {
+.midasi {
+  font-size: 26px;
   padding-top: 50px;
   padding-bottom: 10px;
+}
+.midasi1-2 {
   font-size: 26px;
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+.midasi2 {
+  font-size: 26px;
+  padding-bottom: 10px;
+  padding-top: 50px;
+}
+#imgset {
+  margin: 40px auto;
   text-align: center;
+  margin-bottom: 10px;
+}
+#content {
+  width: 850px;
+  text-align: justify;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  clear: both;
+}
+.sonota_text{
+  margin-bottom: 50px;
+  margin-top: 5px;
+}
+#shoukai_midasi {
+  width: 850px;
+  height: 50px;
+  background: rgb(0, 175, 58);
+}
+#shoukai_midasi, h3 {
+  color: #fff;
+  padding-left: 10px;
+  padding-top: 8px;
+}
+.shokushoukai {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 50px;
+  clear: both;
+}
+#shoukai {
+  padding-top: 70px;
+  padding-bottom: 100px;
 }
 button, a:link {
   color: #fff;
@@ -72,9 +72,10 @@ button, a:visited {
 button {
   width: 250px;
   height: 50px;
-  background: rgb(5, 153, 0);
-  border: 1px solid rgb(5, 153, 0);
+  background: rgb(0, 175, 58);
+  border: 1px solid rgb(0, 175, 58);
   margin: 20px auto;
   margin-left: 320px;
+  margin-bottom: 20px;
 }
 }

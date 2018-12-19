@@ -2,38 +2,51 @@
 body{
   font-size: 20px;
 }
-#boxB {
-  background: #6B3008;
-  height: 265px;
+rt {
+  font-size: 3px;
 }
-#boxB,p {
+#top_midasi {
+  background: rgb(0, 175, 58);
+  width: 700px;
+  height: 60px;
+  margin: 80px auto;
+  margin-bottom: 0;
+}
+#top_midasi, h2 {
   color: #fff;
+  font-size: 22px;
+  padding-top: 6px;
+  padding-left: 10px;
+}
+#top_text {
+  width: 700px;
+  margin: 8px auto;
+}
+#top_text, h3 {
+  color: #666666;
+  padding-bottom: 5px;
+}
+#top_text, p {
+  color: #333;
+  padding-top: 5px;
+}
+#boxB, p {
   font-size: 17px;
   padding-top: 3px;
   text-align: justify;
 }
-.boxB_midasi {
-  text-align: center;
-  padding-bottom: 7px;
-  font-size: 23px;
-}
-.boxB_text {
-  width: 640px;
-  margin-left: 430px;
-  padding-top: 52px;
-}
 .pc {
   width: 100%;
-  box-shadow: 5px 5px 5px 10px #6B3008;
 }
 .btn1 {
   float: left;
-  background: rgb(5, 153, 0);
+  background: rgb(0, 175, 58);
   width: 250px;
   height: 50px;
-  border: 1px solid rgb(5, 153, 0);
-  margin-left: 435px;
-  margin-top: 90px;
+  border: 1px solid rgb(0, 175, 58);
+  margin-left: 400px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 .btn, a:link {
   color: #fff;
@@ -43,15 +56,15 @@ body{
 }
 .btn2 {
   float: right;
-  background: rgb(5, 153, 0);
+  background: rgb(0, 175, 58);
   width: 250px;
   height: 50px;
-  border: 1px solid rgb(5, 153, 0);
-  margin-right: 435px;
-  margin-top: 90px;
+  border: 1px solid rgb(0, 175, 58);
+  margin-right: 400px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 #boxC {
   width: 100%;
-  height: 220px;
 }
 }

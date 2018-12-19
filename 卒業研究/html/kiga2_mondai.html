@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../css/mondai.css">
   <link rel="stylesheet" href="../css_mb/style_mb.css">
   <link rel="stylesheet" href="../css_mb/mondai_mb.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
   <title>問題 | Hunger to Zero</title>
 </head>
 
@@ -18,92 +19,137 @@
     <div id="boxA">
       <a href="../html/top.html"><img src="../img/logo.png" alt="ロゴ"></a>
     </div>
+    <ul class="breadcrumb">
+      <li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+        <a href="file:///C:/Users/koizumi%20shogo/Desktop/%E5%8D%92%E6%A5%AD%E7%A0%94%E7%A9%B6/html/top.html" itemprop="url">
+          <span itemprop="title"><i class="fas fa-home"></i>ホーム</span>
+        </a>
+      </li>
+      <li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+        <a href="file:///C:/Users/koizumi%20shogo/Desktop/%E5%8D%92%E6%A5%AD%E7%A0%94%E7%A9%B6/html/kiga_content.html" itemprop="url">
+          <span itemprop="title">学習ページ</span>
+        </a>
+      </li>
+      <li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+        <a href="file:///C:/Users/koizumi%20shogo/Desktop/%E5%8D%92%E6%A5%AD%E7%A0%94%E7%A9%B6/html/kiga2_mondai.html" itemprop="url">
+          <span itemprop="title">問題ページ</span>
+        </a>
+      </li>
+    </ul>
 
-    <!--問題出題-->
-    <div id="quiz"></div>
-    <div id="select"></div>
-    <div id="answer"></div>
-    <script>
-      qa = new Array();
-      qa[0] = ["飢餓(きが)になっている人は何人でしょう？","8億5000万人","10億5000万人","12億5000万人","14億5000万人",2];
-      qa[1] = ["飢餓になっている人が一番多い国はどこでしょうか？","日本","コートジボワール","インド","中国",4];
-      qa[2] = ["1分間で飢餓で何人の人がなくなっているでしょうか？","17人","12人","7人","1人",1];
-      qa[3] = ["それでは、1日では何人でしょう？","200人","4万人","1000人","1万人",2];
-      qa[4] = ["飢餓はなぜ起こるでしょうか？次の中からまちがっているのは何ですか？","病気","自然災害(しぜんさいがい)、戦争(せんそう)","貧困(ひんこん)","食糧難(しょくりょうなん)",2];
-      qa[5] = ["飢餓が起こる国では食べ物が十分あるのにそれが多くの人にわたることはありません。それはなぜでしょう？まちがっているのをえらんで下さい。","お金がなく、食べ物が買えないから","えらい人がひとりじめしているから","他国に食べ物を売っているから","動物のエサになっているから",2];
-      qa[6] = ["飢餓が多い国ではこどもがたくさん生まれてきます。それはなぜでしょう？","こどもがかわいいから","はたらき手がほしいから","食べ物がほしいから","野球チームを作りたいから",2];
-      qa[7] = ["日本ではわたしたちの食べ物の半分以上(いじょう)が他国から買ったものです。ですが、その多くはいろいろな理由ですてられてしまっています。それはどんな理由でしょうか？まちがっているものをえらんで下さい。","食べきれなかったから","賞味期限(しょうみきげん)が切れているから","食べ物で遊んでいたから","カビが生えているから",3];
-      qa[8] = ["飢餓の多い国では仕事がありません。それはなぜでしょう？","仕事がないから","めんどくさいから","仕事ができる力がないから","仕事をする場所がないから",4];
-      qa[9] = ["アフリカでは何人に1人が飢餓になっているしょうか？","10人","100人","4人","8人",3];
+  <!--問題出題-->
+  <div id="quiz"></div>
+  <div id="select"></div>
+  <div id="answer"></div>
+  <div id="roll"></div>
+  <script>
+    qa = new Array();
+    qa[0] = ["飢餓(きが)になっている人は何人でしょう？", "8億5000万人", "10億5000万人", "12億5000万人", "14億5000万人", 2];
+    qa[1] = ["飢餓になっている人が一番多い国はどこでしょうか？", "日本", "コートジボワール", "インド", "中国", 4];
+    qa[2] = ["1分間で飢餓で何人の人がなくなっているでしょうか？", "17人", "12人", "7人", "1人", 1];
+    qa[3] = ["それでは、1日では何人でしょう？", "200人", "4万人", "1000人", "1万人", 2];
+    qa[4] = ["飢餓はなぜ起こるでしょうか？次の中からまちがっているのは何ですか？", "病気", "自然災害(しぜんさいがい)、戦争(せんそう)", "貧困(ひんこん)", "食糧難(しょくりょうなん)", 2];
+    qa[5] = ["飢餓が起こる国では食べ物が十分あるのにそれが多くの人にわたることはありません。それはなぜでしょう？まちがっているのをえらんで下さい。", "お金がなく、食べ物が買えないから", "えらい人がひとりじめしているから", "他国に食べ物を売っているから", "動物のエサになっているから", 2];
+    qa[6] = ["飢餓が多い国ではこどもがたくさん生まれてきます。それはなぜでしょう？", "こどもがかわいいから", "はたらき手がほしいから", "食べ物がほしいから", "野球チームを作りたいから", 2];
+    qa[7] = ["日本ではわたしたちの食べ物の半分以上(いじょう)が他国から買ったものです。ですが、その多くはいろいろな理由ですてられてしまっています。それはどんな理由でしょうか？まちがっているものをえらんで下さい。", "食べきれなかったから", "賞味期限(しょうみきげん)が切れているから", "食べ物で遊んでいたから", "カビが生えているから", 3];
+    qa[8] = ["飢餓の多い国では仕事がありません。それはなぜでしょう？", "仕事がないから", "めんどくさいから", "仕事ができる力がないから", "仕事をする場所がないから", 4];
+    qa[9] = ["アフリカでは何人に1人が飢餓になっているしょうか？", "10人", "100人", "4人", "8人", 3];
+    qa[10] = ["飢餓が起きている国の中でも、ときに緊急を要する飢餓状況にあるとされる国はどこでしょうか？", "レバノン", "ウクライナ", "イエメン", "アフガニスタン", 3];
+    qa[11] = ["飢餓が原因により栄養不足(えいようぶそく)で身長が年齢平均(ねんれいへいきん)を下回る五才みまんのこどもは世界に何人にいるでしょう？", "約1000人", "約1万人", "約1億5千万人", "約2億5千万人", 3];
+    qa[12] = ["5000円を一回寄与(きよ)することで一人のこどもに栄養たっぷりの食べ物をどのくらいの間、とどけることができるでしょうか？", "100日", "1年間", "50日", "5年間", 2];
+    qa[13] = ["フードロスとは何の略(りゃく)でしょうか？", "食べ物がないこと", "おなかがすいていること", "食べられるはずの物がすてられてしまうこと", "食べ物があまってしまうこと", 3];
+    qa[14] = ["国際社会(こくさいしゃかい)は目標として、いつまでに飢餓をゼロにするという目標を立てました。それは何年でしょう？", "2020年", "2030年", "2050年", "2100年", 2];
 
-      //初期設定
-      q_sel = 4; //選択肢の数
-      q_max = 10; //出題数
-      setReady();
+     //解説文
+     an = new Array();
+    an[0] = ["解説1"];
+    an[1] = ["解説2"];
+    an[2] = ["解説3"];
+    an[3] = ["解説4"];
+    an[4] = ["解説5"];
+    an[5] = ["解説6"];
+    an[6] = ["解説7"];
+    an[7] = ["解説8"];
+    an[8] = ["解説9"];
+    an[9] = ["解説10"];
 
-      //初期設定
-      function setReady() {
-        count = 0; //問題番号
-        ansers = new Array(); //解答記録
+    //初期設定
+    q_sel = 4; //選択肢の数
+    q_max = 10; //出題数
 
-        //最初の問題
-        quiz();
+    setReady();
+
+    //初期設定
+    function setReady() {
+      count = 0; //問題番号
+      ansers = new Array(); //解答記録
+
+      //最初の問題
+      quiz();
+    }
+
+    //問題表示
+    function quiz() {
+      var s, n;
+      //問題
+      rnd = Math.floor(Math.random() * qa.length); //乱数
+      document.getElementById("quiz").innerHTML = (count + 1) + "問目：" + qa[rnd][0];
+      //選択肢
+      s = "";
+      for (n = 1; n <= q_sel; n++) {
+        if (qa[rnd][n] != "") {
+          s += "<a href='javascript:anser(" + n + ")'>" + n + "：" + qa[rnd][n] + "</a>";
+        }
+      }
+      document.getElementById("select").innerHTML = s;
+    }
+
+    //解答表示
+    function anser(num) {
+      var s;
+      s = (count + 1) + "問目：";
+      //答え合わせ
+      if (num == qa[rnd][q_sel + 1]) {
+        //正解
+        ansers[count] = "○";
+      } else {
+        ansers[count] = "×";
       }
 
-      //問題表示
-      function quiz() {
-        //問題
-        rnd = Math.floor(Math.random() * qa.length); //乱数
-        document.getElementById("quiz").innerHTML = (count + 1) + "問目: " + qa[rnd][0];
-        //選択肢
-        s = ""
-        for (n=1; n<=q_sel;n++) {
-          if (qa[rnd][n] != "") {
-            s += "<a href='javascript:anser(" + n + ")'>" + n + "：" + qa[rnd][n] + "</a>";
-          }
+      //解説文
+      document.getElementById("roll").innerHTML = an[count];
+
+      s += ansers[count] + qa[rnd][num];
+      document.getElementById("answer").innerHTML = s;
+
+      //次の問題を表示
+      count++;
+      if (count < q_max) {
+        quiz();
+      } else {
+        //終了
+        s = "<table border='2'><caption>成績発表</caption>";
+        //1行目
+        s += "<tr><th>問題</th>";
+        for (n = 0; n < qa.length; n++) {
+          s += "<th>" + (n + 1) + "</th>";
         }
+        s += "</tr>";
+        //2行目
+        s += "<tr><th>成績</th>";
+        for (n = 0; n < qa.length; n++) {
+          s += "<td>" + ansers[n] + "</td>";
+        }
+        s += "</tr>";
+        s += "</table>";
+        document.getElementById("quiz").innerHTML = s;
+        //次の選択肢
+        s = "<a href='javascript:history.back()'>前のページに戻る</a>";
+        s += "<a href=''>もう一度問題をとく</a>";
         document.getElementById("select").innerHTML = s;
       }
-
-      //解答表示
-      function anser(num) {
-        var s;
-        s =(count + 1) + "問目: ";
-        //答え合わせ
-        if(num == qa[rnd][q_sel + 1]) {
-          //正解
-          ansers[count] = "〇";
-        } else {
-          ansers[count] = "✕";
-        }
-        s += ansers[count] + qa[rnd][num];
-        document.getElementById("answer").innerHTML = s;
-
-        //次の問題を表示
-        count++;
-        if (count < q_max) {
-        quiz();
-        } else {
-          //終了
-          s = "<table border='2'><caption>成績発表</caption>";
-          //1行目
-          s += "<tr><th>問題</th>";
-          for (n=0; n<qa.length; n++) {
-            s += "<th>" + (n+1) + "</th>";
-          }
-          s += "</tr>";
-          //2行目
-          s += "<tr><th>成績</th>";
-          for (n=0; n<qa/length; n++) {
-            s += "<td>" + ansers[n] + "</td>";
-          }
-          s += "</tr>";
-          s += "</table>";
-          document.getElementById("quiz").innerHTML = s;
-          document.getElementById("select").innerHTML =s;
-        }
-      }
-    </script>
+    }
+  </script>
 </body>
 
 </html>
