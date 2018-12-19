@@ -1,51 +1,23 @@
 @media screen and (max-width: 600px) {
-.question{
-  font-weight: 600;
-  margin-bottom: 15px;
+#quiz {
+  width: 90%;
+  margin-top: 120px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
 }
-.answers {
-  margin-bottom: 30px;
+#select {
+  width: 90%;
+  margin-left: 50px;
 }
-.answers label{
+#answer {
+  width: 90%;
+}
+#answer, a {
   display: block;
-  margin-bottom: 15px;
+  width: 90%;
 }
-#submit{
-  font-size: 18px;
-  background-color: rgb(0, 33, 179);
-  color: #fff;
-  border: 0px;
-  cursor: pointer;
-  margin-bottom: 20px;
-  margin-top: 10px;
-  margin-left: 150px;
-  width: 230px;
-  height: 50px;
-}
-#submit:hover{
-  background-color: rgb(0, 33, 179);
-}
-#results {
-  font-size: 50px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-button {
-  font-size: 18px;
-  background-color: rgb(0, 33, 179);
-  border: 0px;
-  cursor: pointer;
-  margin-bottom: 50px;
-  margin-top: 10px;
-  margin-left: 150px;
-  width: 230px;
-  height: 50px;
-}
-button:hover {
-  background-color: rgb(0, 33, 179);
-}
-button a{
-  color: #fff;
+#roll {
+  width: 90%;
 }
 }

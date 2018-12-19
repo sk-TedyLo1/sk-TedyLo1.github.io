@@ -17,10 +17,6 @@ body {
 #boxA, img {
   margin-top: 5px;
 }
-#quiz {
-  width: 90%;
-  margin: 5px auto;
-}
 /*パンくずリスト*/
 .breadcrumb {
   padding-left: 24px;
