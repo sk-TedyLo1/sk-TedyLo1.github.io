@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="../css/mondai.css">
   <link rel="stylesheet" href="../css_mb/style_mb.css">
   <link rel="stylesheet" href="../css_mb/mondai_mb.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h"
+    crossorigin="anonymous">
   <title>問題 | Hunger to Zero</title>
 </head>
 
@@ -97,7 +98,38 @@
       }
 
       //解説文
-      document.getElementById("roll").innerHTML = an[count];
+      switch (rnd) {
+        case 0:
+          document.getElementById("roll").innerHTML = an[0];
+          break;
+        case 1:
+          document.getElementById("roll").innerHTML = an[1];
+          break;
+        case 2:
+          document.getElementById("roll").innerHTML = an[2];
+          break;
+        case 3:
+          document.getElementById("roll").innerHTML = an[3];
+          break;
+        case 4:
+          document.getElementById("roll").innerHTML = an[4];
+          break;
+        case 5:
+          document.getElementById("roll").innerHTML = an[5];
+          break;
+        case 6:
+          document.getElementById("roll").innerHTML = an[6];
+          break;
+        case 7:
+          document.getElementById("roll").innerHTML = an[7];
+          break;
+        case 8:
+          document.getElementById("roll").innerHTML = an[8];
+          break;
+        case 9:
+          document.getElementById("roll").innerHTML = an[9];
+          break;
+      }
 
       s += ansers[count] + qa[rnd][num];
       document.getElementById("answer").innerHTML = s;

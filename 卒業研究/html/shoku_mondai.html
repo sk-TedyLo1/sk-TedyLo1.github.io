@@ -24,7 +24,7 @@
   <div id="answer"></div>
   <div id="roll"></div>
   <div id="btn">
-    <button><a href="../html/top.html" id="btna">最初にもどる</a></button>
+    <button><a href="../html/shoku_content.html" id="btna">もどる</a></button>
   </div>
   <script>
     qa = new Array();
@@ -35,7 +35,7 @@
     qa[4] = ["この中で一番生産コストがかからないのはどれでしょう？", "とり", "ブタ", "牛", "昆虫", 4];
     qa[5] = ["家畜(かちく)が世界の60～70パーセント出すことによって環境汚染(かんきょうおせん)につながる物は次のうちどれでしょう？", "アドレナリン", "アンモニア", "アンコモン", "アントシアニン", 2];
     qa[6] = ["マグロのトロ味とたとえられる昆虫(こんちゅう)は次のうちどれでしょう？", "クロゴキブリ", "セミ", "コオロギ", "カミキリムシ", 4];
-    qa[7] = ["3Dフードプリンターは食べ物をどうするプリンターですか？", "立体(りったい)出力", "水平(すいへい)出力", "垂直(すいちょく)出力", "印刷(いんさつ)出力",1];
+    qa[7] = ["3Dフードプリンターは食べ物をどうするプリンターですか？", "立体(りったい)出力", "水平(すいへい)出力", "垂直(すいちょく)出力", "印刷(いんさつ)出力", 1];
     qa[8] = ["人工肉は何から生産することが出来ますか？", "動物", "植物", "空気と電気", "昆虫", 2];
     qa[9] = ["フィンランドで何のために空気と電気からできた食糧(しょくりょう)を作ったでしょうか？", "食糧を売って金を稼ぐため", "変なものを作ってみたかったから", "たまたまできてしまった", "世界から飢餓(きが)をなくすため", 4];
 
@@ -97,8 +97,38 @@
       }
 
       //解説文
-      document.getElementById("roll").innerHTML = an[count];
-
+      switch (rnd) {
+        case 0:
+          document.getElementById("roll").innerHTML = an[0];
+          break;
+        case 1:
+          document.getElementById("roll").innerHTML = an[1];
+          break;
+        case 2:
+          document.getElementById("roll").innerHTML = an[2];
+          break;
+        case 3:
+          document.getElementById("roll").innerHTML = an[3];
+          break;
+        case 4:
+          document.getElementById("roll").innerHTML = an[4];
+          break;
+        case 5:
+          document.getElementById("roll").innerHTML = an[5];
+          break;
+        case 6:
+          document.getElementById("roll").innerHTML = an[6];
+          break;
+        case 7:
+          document.getElementById("roll").innerHTML = an[7];
+          break;
+        case 8:
+          document.getElementById("roll").innerHTML = an[8];
+          break;
+        case 9:
+          document.getElementById("roll").innerHTML = an[9];
+          break;
+      }
       s += ansers[count] + qa[rnd][num];
       document.getElementById("answer").innerHTML = s;
 

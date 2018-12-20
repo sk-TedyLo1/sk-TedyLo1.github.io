@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="../css/mondai.css">
   <link rel="stylesheet" href="../css_mb/style_mb.css">
   <link rel="stylesheet" href="../css_mb/mondai_mb.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h"
+    crossorigin="anonymous">
   <title>問題 | Hunger to Zero</title>
 </head>
 
@@ -20,117 +21,147 @@
       <a href="../html/top.html"><img src="../img/logo.png" alt="ロゴ"></a>
     </div>
 
-  <!--問題出題-->
-  <div id="quiz"></div>
-  <div id="select"></div>
-  <div id="answer"></div>
-  <div id="roll"></div>
-  <div id="btn">
-    <button><a href="../html/top.html" id="btna">最初にもどる</a></button>
-  </div>
-  <script>
-    qa = new Array();
-    qa[0] = ["飢餓(きが)になっている人は何人でしょう？", "8億5000万人", "10億5000万人", "12億5000万人", "14億5000万人", 2];
-    qa[1] = ["飢餓(きが)になっている人が一番多い国はどこでしょうか？", "日本", "コートジボワール", "インド", "中国", 4];
-    qa[2] = ["1分間で飢餓(きが)で何人の人がなくなっているでしょうか？", "17人", "12人", "7人", "1人", 1];
-    qa[3] = ["それでは、1日では何人でしょう？", "200人", "4万人", "1000人", "1万人", 2];
-    qa[4] = ["飢餓(きが)はなぜ起こるでしょうか？次の中からまちがっているのは何ですか？", "病気", "自然災害(しぜんさいがい)、戦争(せんそう)", "貧困(ひんこん)", "食糧難(しょくりょうなん)", 2];
-    qa[5] = ["飢餓(きが)が起こる国では食べ物が十分あるのにそれが多くの人にわたることはありません。それはなぜでしょう？まちがっているのをえらんで下さい。", "お金がなく、食べ物が買えないから", "えらい人がひとりじめしているから", "他国に食べ物を売っているから", "動物のエサになっているから", 2];
-    qa[6] = ["飢餓(きが)が多い国ではこどもがたくさん生まれてきます。それはなぜでしょう？", "こどもがかわいいから", "はたらき手がほしいから", "食べ物がほしいから", "野球チームを作りたいから", 2];
-    qa[7] = ["日本ではわたしたちの食べ物の半分以上(いじょう)が他国から買ったものです。ですが、その多くはいろいろな理由ですてられてしまっています。それはどんな理由でしょうか？まちがっているものをえらんで下さい。", "食べきれなかったから", "賞味期限(しょうみきげん)が切れているから", "食べ物で遊んでいたから", "カビが生えているから", 3];
-    qa[8] = ["飢餓(きが)の多い国では仕事がありません。それはなぜでしょう？", "仕事がないから", "めんどくさいから", "仕事ができる力がないから", "仕事をする場所がないから", 4];
-    qa[9] = ["アフリカでは何人に1人が飢餓(きが)になっているしょうか？", "10人", "100人", "4人", "8人", 3];
-
-     //解説文
-     an = new Array();
-    an[0] = ["飢餓(きが)とは食べ物の不足によって栄養不足(えいようぶそく)が続き、体調管理(たいりょうかんり)がむずかしくなっていることです。"];
-    an[1] = ["中国が一番飢餓人口(きがじんこう)が多く、その次がインドになります。ほかにも、アフリカなどでも飢餓人口がふえ続けています。"];
-    an[2] = ["1分間で17人となると、3分の間に、51人もの人がなくなっていることになります。"];
-    an[3] = ["みなさんが１日をふつうにすごして、ふつうにねる時も、たくさんの命がなくなっています。"];
-    an[4] = ["戦争(せんそう)、自然災害(しぜんさいがい)は、生活に大きな影響(えいきょう)を与えるものであって飢餓(きが)が起こるもとにはなりません。"];
-    an[5] = ["作られた食べ物のほとんどは、動物のエサや他国へ売っているため、平等に行きわたることはありません。"];
-    an[6] = ["まずしい人々にとってこどもたちは、はたらき手であり、こどもがいなくては生活がしていけません。ですが、おさなすぎるために病気にかかりやすく、すぐになくなってしまいます。そして、また、こどもを産まなければいけません。"];
-    an[7] = ["いろいろな食文化のある日本では食べ物がたくさんあるため、好き嫌い(すききらい)などで、食べ物を粗末(そまつ)にしているというのが今の日本です。"];
-    an[8] = ["その土地の地主が、ほとんどの土地をもっているために、多くの人が自分で畑を作ることが出来ません。さらに、仕事をもとめて都会に行っても仕事もらえることはほとんどありません。"];
-    an[9] = ["アフリカのように成長している国では、いまだ国の中で、戦争やテロ、また学校などがないため仕事も出来ないため、生きていく上で必要(ひつよう)な生活ができなくなってしまっています。"];
-
-    //初期設定
-    q_sel = 4; //選択肢の数
-    q_max = 10; //出題数
-
-    setReady();
-
-    //初期設定
-    function setReady() {
-      count = 0; //問題番号
-      ansers = new Array(); //解答記録
-
-      //最初の問題
-      quiz();
-    }
-
-    //問題表示
-    function quiz() {
-      var s, n;
-      //問題
-      rnd = Math.floor(Math.random() * qa.length); //乱数
-      document.getElementById("quiz").innerHTML = (count + 1) + "問目：" + qa[rnd][0];
-      //選択肢
-      s = "";
-      for (n = 1; n <= q_sel; n++) {
-        if (qa[rnd][n] != "") {
-          s += "<a href='javascript:anser(" + n + ")'>" + n + "：" + qa[rnd][n] + "</a>";
-        }
-      }
-      document.getElementById("select").innerHTML = s;
-    }
-
-    //解答表示
-    function anser(num) {
-      var s;
-      s = (count + 1) + "問目：";
-      //答え合わせ
-      if (num == qa[rnd][q_sel + 1]) {
-        //正解
-        ansers[count] = "○";
-      } else {
-        ansers[count] = "×";
-      }
+    <!--問題出題-->
+    <div id="quiz"></div>
+    <div id="select"></div>
+    <div id="answer"></div>
+    <div id="roll"></div>
+    <div id="btn">
+      <button><a href="../html/top.html" id="btna">最初にもどる</a></button>
+    </div>
+    <script>
+      qa = new Array();
+      qa[0] = ["飢餓(きが)になっている人は何人でしょう？", "8億5000万人", "10億5000万人", "12億5000万人", "14億5000万人", 2];
+      qa[1] = ["飢餓(きが)になっている人が一番多い国はどこでしょうか？", "日本", "コートジボワール", "インド", "中国", 4];
+      qa[2] = ["1分間で飢餓(きが)で何人の人がなくなっているでしょうか？", "17人", "12人", "7人", "1人", 1];
+      qa[3] = ["それでは、1日では何人でしょう？", "200人", "4万人", "1000人", "1万人", 2];
+      qa[4] = ["飢餓(きが)はなぜ起こるでしょうか？次の中からまちがっているのは何ですか？", "病気", "自然災害(しぜんさいがい)、戦争(せんそう)", "貧困(ひんこん)", "食糧難(しょくりょうなん)", 2];
+      qa[5] = ["飢餓(きが)が起こる国では食べ物が十分あるのにそれが多くの人にわたることはありません。それはなぜでしょう？まちがっているのをえらんで下さい。", "お金がなく、食べ物が買えないから", "えらい人がひとりじめしているから", "他国に食べ物を売っているから", "動物のエサになっているから", 2];
+      qa[6] = ["飢餓(きが)が多い国ではこどもがたくさん生まれてきます。それはなぜでしょう？", "こどもがかわいいから", "はたらき手がほしいから", "食べ物がほしいから", "野球チームを作りたいから", 2];
+      qa[7] = ["日本ではわたしたちの食べ物の半分以上(いじょう)が他国から買ったものです。ですが、その多くはいろいろな理由ですてられてしまっています。それはどんな理由でしょうか？まちがっているものをえらんで下さい。", "食べきれなかったから", "賞味期限(しょうみきげん)が切れているから", "食べ物で遊んでいたから", "カビが生えているから", 3];
+      qa[8] = ["飢餓(きが)の多い国では仕事がありません。それはなぜでしょう？", "仕事がないから", "めんどくさいから", "仕事ができる力がないから", "仕事をする場所がないから", 4];
+      qa[9] = ["アフリカでは何人に1人が飢餓(きが)になっているしょうか？", "10人", "100人", "4人", "8人", 3];
 
       //解説文
-      document.getElementById("roll").innerHTML = an[count];
+      an = new Array();
+      an[0] = ["飢餓(きが)とは食べ物の不足によって栄養不足(えいようぶそく)が続き、体調管理(たいりょうかんり)がむずかしくなっていることです。"];
+      an[1] = ["中国が一番飢餓人口(きがじんこう)が多く、その次がインドになります。ほかにも、アフリカなどでも飢餓人口がふえ続けています。"];
+      an[2] = ["1分間で17人となると、3分の間に、51人もの人がなくなっていることになります。"];
+      an[3] = ["みなさんが１日をふつうにすごして、ふつうにねる時も、たくさんの命がなくなっています。"];
+      an[4] = ["戦争(せんそう)、自然災害(しぜんさいがい)は、生活に大きな影響(えいきょう)を与えるものであって飢餓(きが)が起こるもとにはなりません。"];
+      an[5] = ["作られた食べ物のほとんどは、動物のエサや他国へ売っているため、平等に行きわたることはありません。"];
+      an[6] = ["まずしい人々にとってこどもたちは、はたらき手であり、こどもがいなくては生活がしていけません。ですが、おさなすぎるために病気にかかりやすく、すぐになくなってしまいます。そして、また、こどもを産まなければいけません。"];
+      an[7] = ["いろいろな食文化のある日本では食べ物がたくさんあるため、好き嫌い(すききらい)などで、食べ物を粗末(そまつ)にしているというのが今の日本です。"];
+      an[8] = ["その土地の地主が、ほとんどの土地をもっているために、多くの人が自分で畑を作ることが出来ません。さらに、仕事をもとめて都会に行っても仕事もらえることはほとんどありません。"];
+      an[9] = ["アフリカのように成長している国では、いまだ国の中で、戦争やテロ、また学校などがないため仕事も出来ないため、生きていく上で必要(ひつよう)な生活ができなくなってしまっています。"];
 
-      s += ansers[count] + qa[rnd][num];
-      document.getElementById("answer").innerHTML = s;
+      //初期設定
+      q_sel = 4; //選択肢の数
+      q_max = 10; //出題数
 
-      //次の問題を表示
-      count++;
-      if (count < q_max) {
+      setReady();
+
+      //初期設定
+      function setReady() {
+        count = 0; //問題番号
+        ansers = new Array(); //解答記録
+
+        //最初の問題
         quiz();
-      } else {
-        //終了
-        s = "<table border='2'><caption>成績発表</caption>";
-        //1行目
-        s += "<tr><th>問題</th>";
-        for (n = 0; n < qa.length; n++) {
-          s += "<th>" + (n + 1) + "</th>";
-        }
-        s += "</tr>";
-        //2行目
-        s += "<tr><th>成績</th>";
-        for (n = 0; n < qa.length; n++) {
-          s += "<td>" + ansers[n] + "</td>";
-        }
-        s += "</tr>";
-        s += "</table>";
-        document.getElementById("quiz").innerHTML = s;
-        //次の選択肢
-        //s = "<a href='javascript:history.back()'>前のページに戻る</a>";
-        //s += "<a href=''>もう一度問題をとく</a>";
-        document.getElementById("select").innerHTML = "";
       }
-    }
-  </script>
+
+      //問題表示
+      function quiz() {
+        var s, n;
+        //問題
+        rnd = Math.floor(Math.random() * qa.length); //乱数
+        document.getElementById("quiz").innerHTML = (count + 1) + "問目：" + qa[rnd][0];
+        //選択肢
+        s = "";
+        for (n = 1; n <= q_sel; n++) {
+          if (qa[rnd][n] != "") {
+            s += "<a href='javascript:anser(" + n + ")'>" + n + "：" + qa[rnd][n] + "</a>";
+          }
+        }
+        document.getElementById("select").innerHTML = s;
+      }
+
+      //解答表示
+      function anser(num) {
+        var s;
+        s = (count + 1) + "問目：";
+        //答え合わせ
+        if (num == qa[rnd][q_sel + 1]) {
+          //正解
+          ansers[count] = "○";
+        } else {
+          ansers[count] = "×";
+        }
+
+        //解説文
+        switch (rnd) {
+          case 0:
+            document.getElementById("roll").innerHTML = an[0];
+            break;
+          case 1:
+            document.getElementById("roll").innerHTML = an[1];
+            break;
+          case 2:
+            document.getElementById("roll").innerHTML = an[2];
+            break;
+          case 3:
+            document.getElementById("roll").innerHTML = an[3];
+            break;
+          case 4:
+            document.getElementById("roll").innerHTML = an[4];
+            break;
+          case 5:
+            document.getElementById("roll").innerHTML = an[5];
+            break;
+          case 6:
+            document.getElementById("roll").innerHTML = an[6];
+            break;
+          case 7:
+            document.getElementById("roll").innerHTML = an[7];
+            break;
+          case 8:
+            document.getElementById("roll").innerHTML = an[8];
+            break;
+          case 9:
+            document.getElementById("roll").innerHTML = an[9];
+            break;
+        }
+        s += ansers[count] + qa[rnd][num];
+        document.getElementById("answer").innerHTML = s;
+
+        //次の問題を表示
+        count++;
+        if (count < q_max) {
+          quiz();
+        } else {
+          //終了
+          s = "<table border='2'><caption>成績発表</caption>";
+          //1行目
+          s += "<tr><th>問題</th>";
+          for (n = 0; n < qa.length; n++) {
+            s += "<th>" + (n + 1) + "</th>";
+          }
+          s += "</tr>";
+          //2行目
+          s += "<tr><th>成績</th>";
+          for (n = 0; n < qa.length; n++) {
+            s += "<td>" + ansers[n] + "</td>";
+          }
+          s += "</tr>";
+          s += "</table>";
+          document.getElementById("quiz").innerHTML = s;
+          //次の選択肢
+          //s = "<a href='javascript:history.back()'>前のページに戻る</a>";
+          //s += "<a href=''>もう一度問題をとく</a>";
+          document.getElementById("select").innerHTML = "";
+        }
+      }
+    </script>
 </body>
 
 </html>
