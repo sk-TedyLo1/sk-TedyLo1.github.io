@@ -4,6 +4,7 @@
   padding-top: 30px;
   font-size: 35px;
   width: 850px;
+  text-align: justify;
 }
 #select {
   width: 850px;
@@ -22,9 +23,11 @@
   font-size: 20px;
   width: 850px;
   margin: 0 auto;
+  text-align: justify;
 }
 #btn {
   text-align: center;
+  margin-top: 20px;
 }
 #btna {
   padding: 7px;
@@ -42,6 +45,9 @@ table {
   width: 100%;
 }
 td {
+  text-align: center;
+}
+th {
   text-align: center;
 }
 }
