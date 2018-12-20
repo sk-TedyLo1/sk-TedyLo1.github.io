@@ -24,6 +24,9 @@
   <div id="select"></div>
   <div id="answer"></div>
   <div id="roll"></div>
+  <div id="btn">
+    <button><a href="../html/kiga_content.html" id="btna">もどる</a></button>
+  </div>
   <script>
     qa = new Array();
     qa[0] = ["飢餓(きが)とは何でしょうか？", "病気のこと", "食べ物がないこと", "やせていること", "うえていること", 4];
@@ -121,9 +124,9 @@
         s += "</table>";
         document.getElementById("quiz").innerHTML = s;
         //次の選択肢
-        s = "<a href='javascript:history.back()'>前のページに戻る</a>";
-        s += "<a href=''>もう一度問題をとく</a>";
-        document.getElementById("select").innerHTML = s;
+        //s = "<a href='javascript:history.back()'>前のページに戻る</a>";
+        //s += "<a href=''>もう一度問題をとく</a>";
+        document.getElementById("select").innerHTML = "";
       }
     }
   </script>

@@ -12,12 +12,38 @@
 }
 #answer {
   width: 90%;
+  text-align: center;
 }
 #answer, a {
   display: block;
   width: 90%;
+  margin-bottom: 25px;
 }
 #roll {
   width: 90%;
+  margin: 0 auto;
+}
+#btn {
+  text-align: center;
+  margin-top: 50px;
+}
+#btna {
+  padding: 7px;
+  color: #fff;
+}
+button {
+  width: 150px;
+  height: 40px;
+  background: rgb(0, 175, 58);
+  border: 1px solid rgb(0, 175, 58);
+}
+table {
+  border: 5px solid rgb(0, 175, 58);
+  border-collapse: collapse;
+  width: 90%;
+  text-align: center;
+}
+td {
+  text-align: center;
 }
 }
