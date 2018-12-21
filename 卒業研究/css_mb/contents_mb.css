@@ -41,9 +41,9 @@
   text-align: center;
 }
 #shoukai_midasi {
-  width: 90%;
   height: 50px;
   background: rgb(0, 175, 58);
+  width: 90%;
 }
 #shoukai_midasi, h3 {
   color: #fff;

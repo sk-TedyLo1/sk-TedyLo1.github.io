@@ -1,14 +1,14 @@
 @media screen and (max-width: 600px) { /*ウィンドウの幅が600px以下の時に適当*/
 #top_midasi {
   background: rgb(0, 175, 58);
-  width: 370px;
+  width: 90%;
   height: 55px;
   margin: 30px auto;
   margin-bottom: 10px;
 }
 #top_midasi, h2 {
   color: #fff;
-  font-size: 22px;
+  font-size: 21px;
   text-align: center;
   padding-top: 8px;
 }
@@ -16,7 +16,7 @@ rt {
   font-size: 8px;
 }
 #top_text {
-  width: 370px;
+  width: 90%;
   margin: 0 auto;
 }
 #top_text, h3 {
